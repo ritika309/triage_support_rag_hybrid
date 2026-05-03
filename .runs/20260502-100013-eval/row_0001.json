@@ -1,0 +1,114 @@
+{
+  "row_index": 1,
+  "input": {
+    "issue": "I notice that people I assigned the test in October of 2025 have not received new tests. How long do the tests stay active in the system.",
+    "subject": "Test Active in the system",
+    "company": "HackerRank"
+  },
+  "triage": {
+    "detected_company": "HackerRank",
+    "sub_requests": [
+      "how long tests stay active",
+      "why assigned tests are not received"
+    ],
+    "scope": "in_scope",
+    "risk": "low",
+    "request_type_hint": "product_issue",
+    "product_area_hint": "test_settings",
+    "asks_unilateral_action": false,
+    "short_circuit": "none",
+    "reasoning": "Standard product FAQ about test settings and test delivery."
+  },
+  "retrieval": [
+    {
+      "chunk_id": "665fe1af4501",
+      "doc_path": "data\\hackerrank\\screen\\managing-tests\\8415416322-archiving-a-test.md",
+      "product_area": "screen",
+      "score": 0.027584,
+      "bm25_rank": 19,
+      "dense_rank": 7
+    },
+    {
+      "chunk_id": "7dcd4ffe2931",
+      "doc_path": "data\\hackerrank\\settings\\open-api\\3094540490-candidate-status-in-api-results.md",
+      "product_area": "settings",
+      "score": 0.026585,
+      "bm25_rank": 11,
+      "dense_rank": 20
+    },
+    {
+      "chunk_id": "00af38c593b1",
+      "doc_path": "data\\hackerrank\\integrations\\applicant-tracking-systems\\greenhouse\\3678461564-greenhouse-hackerrank-integration-faqs.md",
+      "product_area": "integrations",
+      "score": 0.016393,
+      "bm25_rank": 1,
+      "dense_rank": 0
+    },
+    {
+      "chunk_id": "4007c9e28136",
+      "doc_path": "data\\hackerrank\\screen\\invite-candidates\\6027855406-inviting-candidates-to-a-test.md",
+      "product_area": "screen",
+      "score": 0.016393,
+      "bm25_rank": 0,
+      "dense_rank": 1
+    },
+    {
+      "chunk_id": "302b4205020a",
+      "doc_path": "data\\hackerrank\\screen\\test-reports\\9722863972-what-is-code-quality.md",
+      "product_area": "screen",
+      "score": 0.016129,
+      "bm25_rank": 2,
+      "dense_rank": 0
+    },
+    {
+      "chunk_id": "059fde55bc9c",
+      "doc_path": "data\\hackerrank\\screen\\managing-tests\\2979262079-modify-test-expiration-time.md",
+      "product_area": "screen",
+      "score": 0.016129,
+      "bm25_rank": 0,
+      "dense_rank": 2
+    },
+    {
+      "chunk_id": "a232d3ba8d15",
+      "doc_path": "data\\hackerrank\\screen\\frequently-asked-questions\\8754663182-what-is-the-maximum-number-of-candidates-i-can-assess-using-coding-assessments%3F.md",
+      "product_area": "screen",
+      "score": 0.015873,
+      "bm25_rank": 3,
+      "dense_rank": 0
+    },
+    {
+      "chunk_id": "97a62b487a49",
+      "doc_path": "data\\hackerrank\\screen\\frequently-asked-questions\\3765449705-i-made-changes-to-test-content.-when-does-it-take-effect-for-the-candidates%3F.md",
+      "product_area": "screen",
+      "score": 0.015873,
+      "bm25_rank": 0,
+      "dense_rank": 3
+    }
+  ],
+  "grounded": {
+    "response": "Tests in HackerRank remain active indefinitely unless a specific start and end time are defined. If an expiration date is set for a test or an invitation, candidates will not be able to access or receive the test after that time.\n\nIf candidates assigned a test in October 2025 have not received new tests, it's possible the test itself or the invitation has expired.\n\n**To check or modify test expiration:**\n1. Log in to your HackerRank for Work account.\n2. Go to the **Tests** tab and open the relevant test.\n3. Navigate to **Settings > General**.\n4. Review or modify the **Start date & time** and **End date & time** in the **Test Expiration Time** section.\n\nAfter a test expires, invited candidates cannot access it, and you cannot invite new candidates.\n\n**To check or modify test invitation expiration:**\n1. When inviting candidates, look for the **Expiry** dropdown.\n2. Select an expiry option or choose **Custom** to set a specific date, time, and time zone.\n\nAfter the invitation expiry time, the invitation expires, and candidates can no longer take the test.",
+    "cited_chunk_ids": [
+      "059fde55bc9c",
+      "4007c9e28136"
+    ],
+    "product_area": "screen",
+    "confidence": "high",
+    "insufficient_corpus": false,
+    "can_act_unilaterally": true,
+    "reasoning": "Multiple chunks provide clear information on how test and invitation expiration works, and how to modify these settings, directly addressing both sub-requests."
+  },
+  "final": {
+    "status": "replied",
+    "product_area": "screen",
+    "response": "Tests in HackerRank remain active indefinitely unless a specific start and end time are defined. If an expiration date is set for a test or an invitation, candidates will not be able to access or receive the test after that time.\n\nIf candidates assigned a test in October 2025 have not received new tests, it's possible the test itself or the invitation has expired.\n\n**To check or modify test expiration:**\n1. Log in to your HackerRank for Work account.\n2. Go to the **Tests** tab and open the relevant test.\n3. Navigate to **Settings > General**.\n4. Review or modify the **Start date & time** and **End date & time** in the **Test Expiration Time** section.\n\nAfter a test expires, invited candidates cannot access it, and you cannot invite new candidates.\n\n**To check or modify test invitation expiration:**\n1. When inviting candidates, look for the **Expiry** dropdown.\n2. Select an expiry option or choose **Custom** to set a specific date, time, and time zone.\n\nAfter the invitation expiry time, the invitation expires, and candidates can no longer take the test.",
+    "justification": "Grounded reply from 2 chunk(s) at confidence=high. Multiple chunks provide clear information on how test and invitation expiration works, and how to modify these settings, directly addressing both sub-requests.",
+    "request_type": "product_issue"
+  },
+  "timings_ms": {
+    "triage_ms": 5720.8,
+    "retrieve_ms": 7978.0,
+    "ground_ms": 9876.9,
+    "gate_ms": 0.1,
+    "total_ms": 23575.8
+  }
+}

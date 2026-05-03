@@ -1,0 +1,112 @@
+{
+  "row_index": 23,
+  "input": {
+    "issue": "I am allowing Claude to use my data to improve the models, how long will the data be used for?",
+    "subject": "Personal Data Use",
+    "company": "Claude"
+  },
+  "triage": {
+    "detected_company": "Claude",
+    "sub_requests": [
+      "how long is personal data used for model improvement"
+    ],
+    "scope": "in_scope",
+    "risk": "low",
+    "request_type_hint": "product_issue",
+    "product_area_hint": "privacy",
+    "asks_unilateral_action": false,
+    "short_circuit": "none",
+    "reasoning": "User is asking a question about data usage policy for Claude, which is a standard product inquiry."
+  },
+  "retrieval": [
+    {
+      "chunk_id": "d4b5424e0d78",
+      "doc_path": "data\\claude\\claude\\account-management\\8325621-i-would-like-to-input-sensitive-data-into-my-chats-with-claude-who-can-view-my-conversations.md",
+      "product_area": "account_management",
+      "score": 0.032522,
+      "bm25_rank": 1,
+      "dense_rank": 2
+    },
+    {
+      "chunk_id": "29eb73941077",
+      "doc_path": "data\\claude\\claude-api-and-console\\using-the-claude-api-and-console\\9534590-cost-and-usage-reporting-in-the-claude-console.md",
+      "product_area": "claude_api_and_console",
+      "score": 0.029857,
+      "bm25_rank": 8,
+      "dense_rank": 6
+    },
+    {
+      "chunk_id": "35f28d6ff70e",
+      "doc_path": "data\\claude\\connectors\\pre-built-connectors\\10166901-use-google-workspace-connectors.md",
+      "product_area": "connectors",
+      "score": 0.027885,
+      "bm25_rank": 5,
+      "dense_rank": 20
+    },
+    {
+      "chunk_id": "01dc2eccb441",
+      "doc_path": "data\\claude\\claude\\features-and-capabilities\\12650343-use-claude-for-excel.md",
+      "product_area": "features_and_capabilities",
+      "score": 0.027151,
+      "bm25_rank": 9,
+      "dense_rank": 19
+    },
+    {
+      "chunk_id": "cc28a1d9248b",
+      "doc_path": "data\\claude\\team-and-enterprise-plans\\analytics-and-usage\\13694757-claude-enterprise-analytics-api-access-engagement-and-adoption-data.md",
+      "product_area": "team_and_enterprise_plans",
+      "score": 0.016393,
+      "bm25_rank": 0,
+      "dense_rank": 1
+    },
+    {
+      "chunk_id": "dbaa3f8f6378",
+      "doc_path": "data\\claude\\privacy-and-legal\\12326764-can-i-use-my-outputs-to-train-an-ai-model.md",
+      "product_area": "privacy",
+      "score": 0.016129,
+      "bm25_rank": 2,
+      "dense_rank": 0
+    },
+    {
+      "chunk_id": "d52b10976363",
+      "doc_path": "data\\claude\\safeguards\\14328960-identity-verification-on-claude.md",
+      "product_area": "safeguards",
+      "score": 0.015873,
+      "bm25_rank": 3,
+      "dense_rank": 0
+    },
+    {
+      "chunk_id": "058e0da192d8",
+      "doc_path": "data\\claude\\claude\\get-started-with-claude\\8114494-how-up-to-date-is-claude-s-training-data.md",
+      "product_area": "get_started_with_claude",
+      "score": 0.015873,
+      "bm25_rank": 0,
+      "dense_rank": 3
+    }
+  ],
+  "grounded": {
+    "response": "When you allow Claude to use your chats or coding sessions to improve the models, your data is de-linked from your user ID before review. Access is limited to a small number of personnel involved in model training. We use tools and processes to filter or obfuscate sensitive data. Your data is used solely to make Claude better for everyone and is not used for marketing or sold to third parties. You can adjust your privacy settings at any time. Incognito chats are not used for model improvement.",
+    "cited_chunk_ids": [
+      "d4b5424e0d78"
+    ],
+    "product_area": "privacy",
+    "confidence": "high",
+    "insufficient_corpus": false,
+    "can_act_unilaterally": true,
+    "reasoning": "The user is asking about how long their data is used for model improvement. Chunk d4b5424e0d78 directly addresses this by explaining the privacy protections and how data is used, and that users can adjust settings at any time, implying continuous use while opted-in."
+  },
+  "final": {
+    "status": "replied",
+    "product_area": "privacy",
+    "response": "When you allow Claude to use your chats or coding sessions to improve the models, your data is de-linked from your user ID before review. Access is limited to a small number of personnel involved in model training. We use tools and processes to filter or obfuscate sensitive data. Your data is used solely to make Claude better for everyone and is not used for marketing or sold to third parties. You can adjust your privacy settings at any time. Incognito chats are not used for model improvement.",
+    "justification": "Grounded reply from 1 chunk(s) at confidence=high. The user is asking about how long their data is used for model improvement. Chunk d4b5424e0d78 directly addresses this by explaining the privacy protections and how data is used, and that users can adjust settings at any time, implying continuous use while opted-in.",
+    "request_type": "product_issue"
+  },
+  "timings_ms": {
+    "triage_ms": 5949.8,
+    "retrieve_ms": 36.5,
+    "ground_ms": 10231.9,
+    "gate_ms": 0.0,
+    "total_ms": 16218.3
+  }
+}

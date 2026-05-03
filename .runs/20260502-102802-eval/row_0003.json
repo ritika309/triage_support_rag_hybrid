@@ -1,0 +1,116 @@
+{
+  "row_index": 3,
+  "input": {
+    "issue": "I'm noticing that you all have many default versions of roles. (e.g. front end developer for react, angular, vue.js, etc.) What do you consider best practice \nfor when to create a new test versus create a variant of the test? What are the advantages and disadvantages of using variants?",
+    "subject": "When should I create a variant versus\n have a different test?",
+    "company": "HackerRank"
+  },
+  "triage": {
+    "detected_company": "HackerRank",
+    "sub_requests": [
+      "best practice for creating new test vs variant",
+      "advantages and disadvantages of using variants"
+    ],
+    "scope": "in_scope",
+    "risk": "low",
+    "request_type_hint": "product_issue",
+    "product_area_hint": "test_creation",
+    "asks_unilateral_action": false,
+    "short_circuit": "none",
+    "reasoning": "User is asking about best practices for test creation and variant usage, which is a legitimate question about HackerRank's product."
+  },
+  "retrieval": [
+    {
+      "chunk_id": "ad971ed2ba70",
+      "doc_path": "data\\hackerrank\\general-help\\release-notes\\2321596225-january-2026-release-notes.md",
+      "product_area": "general_help",
+      "score": 0.032522,
+      "bm25_rank": 1,
+      "dense_rank": 2
+    },
+    {
+      "chunk_id": "dac96e7e552f",
+      "doc_path": "data\\hackerrank\\screen\\managing-tests\\7530103378-test-variants.md",
+      "product_area": "screen",
+      "score": 0.032266,
+      "bm25_rank": 3,
+      "dense_rank": 1
+    },
+    {
+      "chunk_id": "7a50a2c8652c",
+      "doc_path": "data\\hackerrank\\screen\\managing-tests\\7530103378-test-variants.md",
+      "product_area": "screen",
+      "score": 0.030579,
+      "bm25_rank": 8,
+      "dense_rank": 3
+    },
+    {
+      "chunk_id": "490ae3ac0d2b",
+      "doc_path": "data\\hackerrank\\screen\\managing-tests\\7530103378-test-variants.md",
+      "product_area": "screen",
+      "score": 0.03031,
+      "bm25_rank": 7,
+      "dense_rank": 5
+    },
+    {
+      "chunk_id": "d682f68583a5",
+      "doc_path": "data\\hackerrank\\general-help\\release-notes\\3121307537-july-2025-release-notes.md",
+      "product_area": "general_help",
+      "score": 0.016129,
+      "bm25_rank": 2,
+      "dense_rank": 0
+    },
+    {
+      "chunk_id": "3d7df3b58a04",
+      "doc_path": "data\\hackerrank\\screen\\best-practice-guides\\5269412517-mitigating-candidate-drop-off.md",
+      "product_area": "screen",
+      "score": 0.015625,
+      "bm25_rank": 4,
+      "dense_rank": 0
+    },
+    {
+      "chunk_id": "7467b9e898b5",
+      "doc_path": "data\\hackerrank\\screen\\managing-tests\\6967597139-creating-a-new-test.md",
+      "product_area": "screen",
+      "score": 0.015625,
+      "bm25_rank": 0,
+      "dense_rank": 4
+    },
+    {
+      "chunk_id": "74d7758da92e",
+      "doc_path": "data\\hackerrank\\general-help\\release-notes\\8474307750-october-2025-release-notes.md",
+      "product_area": "general_help",
+      "score": 0.015385,
+      "bm25_rank": 5,
+      "dense_rank": 0
+    }
+  ],
+  "grounded": {
+    "response": "To determine whether to create a new test or a variant of an existing test in HackerRank, consider the following best practices:\n\n1. **Create a new test** when you need to assess significantly different skills or roles that don't share a common foundation. For example, if you're hiring for both front-end and back-end developer positions, you might create separate tests to focus on the specific skills required for each role.\n\n2. **Create a variant of an existing test** when you want to assess similar skills but with variations in technology, experience level, or other factors. Variants are useful for roles like front-end development where you might have different variants for React, Angular, and Vue.js, as they share many common skills but also have technology-specific differences.\n\nThe advantages of using variants include:\n- **Efficiency**: Managing multiple variants of a test is more efficient than creating and maintaining separate tests for each variation.\n- **Consistency**: Variants ensure that all candidates are assessed on the core skills required for the role, with adjustments made for specific technologies or experience levels.\n\nThe disadvantages of using variants include:\n- **Complexity**: Managing variants can become complex, especially if you have many different versions of a test.\n- **Maintenance**: Updates to one variant may require similar updates to other variants, increasing maintenance time.\n\nWhen deciding between creating a new test and a variant, consider the similarities and differences in the skills you're assessing. If the core skills are the same but with minor adjustments for different technologies or experience levels, a variant might be the better choice. However, if the skills are significantly different, creating a new test is likely more appropriate.",
+    "cited_chunk_ids": [
+      "dac96e7e552f",
+      "7a50a2c8652c",
+      "490ae3ac0d2b",
+      "d682f68583a5"
+    ],
+    "product_area": "screen",
+    "confidence": "high",
+    "insufficient_corpus": false,
+    "can_act_unilaterally": true,
+    "reasoning": "Multiple chunks provide guidance on creating tests and variants, including best practices for when to use each."
+  },
+  "final": {
+    "status": "replied",
+    "product_area": "screen",
+    "response": "To determine whether to create a new test or a variant of an existing test in HackerRank, consider the following best practices:\n\n1. **Create a new test** when you need to assess significantly different skills or roles that don't share a common foundation. For example, if you're hiring for both front-end and back-end developer positions, you might create separate tests to focus on the specific skills required for each role.\n\n2. **Create a variant of an existing test** when you want to assess similar skills but with variations in technology, experience level, or other factors. Variants are useful for roles like front-end development where you might have different variants for React, Angular, and Vue.js, as they share many common skills but also have technology-specific differences.\n\nThe advantages of using variants include:\n- **Efficiency**: Managing multiple variants of a test is more efficient than creating and maintaining separate tests for each variation.\n- **Consistency**: Variants ensure that all candidates are assessed on the core skills required for the role, with adjustments made for specific technologies or experience levels.\n\nThe disadvantages of using variants include:\n- **Complexity**: Managing variants can become complex, especially if you have many different versions of a test.\n- **Maintenance**: Updates to one variant may require similar updates to other variants, increasing maintenance time.\n\nWhen deciding between creating a new test and a variant, consider the similarities and differences in the skills you're assessing. If the core skills are the same but with minor adjustments for different technologies or experience levels, a variant might be the better choice. However, if the skills are significantly different, creating a new test is likely more appropriate.",
+    "justification": "Grounded reply from 4 chunk(s) at confidence=high. Multiple chunks provide guidance on creating tests and variants, including best practices for when to use each.",
+    "request_type": "product_issue"
+  },
+  "timings_ms": {
+    "triage_ms": 15136.8,
+    "retrieve_ms": 74.9,
+    "ground_ms": 38687.0,
+    "gate_ms": 0.1,
+    "total_ms": 53898.8
+  }
+}

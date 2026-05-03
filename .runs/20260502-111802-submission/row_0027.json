@@ -1,0 +1,112 @@
+{
+  "row_index": 27,
+  "input": {
+    "issue": "one of my employee has left. I want to remove them from our hackerrank hiring account",
+    "subject": "Employee leaving the company",
+    "company": "HackerRank"
+  },
+  "triage": {
+    "detected_company": "HackerRank",
+    "sub_requests": [
+      "remove employee from account"
+    ],
+    "scope": "in_scope",
+    "risk": "med",
+    "request_type_hint": "product_issue",
+    "product_area_hint": "user_management",
+    "asks_unilateral_action": false,
+    "short_circuit": "none",
+    "reasoning": "User wants to remove an employee from their HackerRank account, which is a standard user management task that can be handled via documentation."
+  },
+  "retrieval": [
+    {
+      "chunk_id": "69440d85dcfe",
+      "doc_path": "data\\hackerrank\\settings\\gdpr-and-nyc-ai-laws\\2634495557-gdpr-faqs-for-hackerrank-for-work.md",
+      "product_area": "settings",
+      "score": 0.026501,
+      "bm25_rank": 17,
+      "dense_rank": 14
+    },
+    {
+      "chunk_id": "c291a8c6e02d",
+      "doc_path": "data\\hackerrank\\general-help\\evaluation-guides\\1216495690-early-talent-.md",
+      "product_area": "general_help",
+      "score": 0.016393,
+      "bm25_rank": 1,
+      "dense_rank": 0
+    },
+    {
+      "chunk_id": "3a77325a8cea",
+      "doc_path": "data\\hackerrank\\hackerrank_community\\account-settings\\manage-account\\5618101592-delete-an-account.md",
+      "product_area": "community",
+      "score": 0.016393,
+      "bm25_rank": 0,
+      "dense_rank": 1
+    },
+    {
+      "chunk_id": "24dc476b8efc",
+      "doc_path": "data\\hackerrank\\screen\\best-practice-guides\\5269412517-mitigating-candidate-drop-off.md",
+      "product_area": "screen",
+      "score": 0.016129,
+      "bm25_rank": 2,
+      "dense_rank": 0
+    },
+    {
+      "chunk_id": "2ab502c52dfa",
+      "doc_path": "data\\hackerrank\\interviews\\manage-interviews\\6488043690-canceling-an-interview.md",
+      "product_area": "interviews",
+      "score": 0.016129,
+      "bm25_rank": 0,
+      "dense_rank": 2
+    },
+    {
+      "chunk_id": "8fb171c08361",
+      "doc_path": "data\\hackerrank\\settings\\gdpr-and-nyc-ai-laws\\8514725302-summary-of-bias-audit-results-%28hackerrank%27s-image-analysis-system%29.md",
+      "product_area": "settings",
+      "score": 0.015873,
+      "bm25_rank": 3,
+      "dense_rank": 0
+    },
+    {
+      "chunk_id": "bd71bf4d091c",
+      "doc_path": "data\\hackerrank\\settings\\teams-management\\2181136239-deleting-a-team.md",
+      "product_area": "settings",
+      "score": 0.015873,
+      "bm25_rank": 0,
+      "dense_rank": 3
+    },
+    {
+      "chunk_id": "dfc14bc65c46",
+      "doc_path": "data\\hackerrank\\skillup\\getting-started\\4329363164-accessing-skillup-employer-platform.md",
+      "product_area": "skillup",
+      "score": 0.015625,
+      "bm25_rank": 4,
+      "dense_rank": 0
+    }
+  ],
+  "grounded": {
+    "response": "To remove an employee from your HackerRank hiring account, you need to delete their candidate profile. As a Company Admin, follow these steps:\n\n1. Log in to HackerRank for Work.\n2. Navigate to the **Candidates** page.\n3. Search for the employee you wish to remove.\n4. Select the delete option for their profile.",
+    "cited_chunk_ids": [
+      "69440d85dcfe"
+    ],
+    "product_area": "settings",
+    "confidence": "high",
+    "insufficient_corpus": false,
+    "can_act_unilaterally": true,
+    "reasoning": "The chunk provides clear steps for a Company Admin to delete a candidate's profile, which is how an employee would be removed from the account."
+  },
+  "final": {
+    "status": "replied",
+    "product_area": "settings",
+    "response": "To remove an employee from your HackerRank hiring account, you need to delete their candidate profile. As a Company Admin, follow these steps:\n\n1. Log in to HackerRank for Work.\n2. Navigate to the **Candidates** page.\n3. Search for the employee you wish to remove.\n4. Select the delete option for their profile.",
+    "justification": "Grounded reply from 1 chunk(s) at confidence=high. The chunk provides clear steps for a Company Admin to delete a candidate's profile, which is how an employee would be removed from the account.",
+    "request_type": "product_issue"
+  },
+  "timings_ms": {
+    "triage_ms": 6495.0,
+    "retrieve_ms": 33.1,
+    "ground_ms": 8204.2,
+    "gate_ms": 0.1,
+    "total_ms": 14732.4
+  }
+}

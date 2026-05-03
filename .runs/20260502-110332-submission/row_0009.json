@@ -1,0 +1,112 @@
+{
+  "row_index": 9,
+  "input": {
+    "issue": "I am facing an blocker while doing compatible check all the criterias are matching other than zoom \nconnectivity. Due to which i am unable to take the test. I have done all through my way by \nchanging the settings and system configurations but still showing error",
+    "subject": "I am facing an blocker while doing compatible check",
+    "company": "HackerRank"
+  },
+  "triage": {
+    "detected_company": "HackerRank",
+    "sub_requests": [
+      "troubleshoot test compatibility check error (Zoom connectivity)"
+    ],
+    "scope": "in_scope",
+    "risk": "high",
+    "request_type_hint": "product_issue",
+    "product_area_hint": "test_troubleshooting",
+    "asks_unilateral_action": false,
+    "short_circuit": "none",
+    "reasoning": "User is experiencing a blocker during test compatibility check, specifically with Zoom connectivity, and has attempted self-resolution. This requires troubleshooting assistance."
+  },
+  "retrieval": [
+    {
+      "chunk_id": "bb27a4e5e410",
+      "doc_path": "data\\hackerrank\\hackerrank_community\\practice-coding-challenges\\1273631973-coding-challenges-faqs.md",
+      "product_area": "community",
+      "score": 0.028372,
+      "bm25_rank": 5,
+      "dense_rank": 17
+    },
+    {
+      "chunk_id": "00af38c593b1",
+      "doc_path": "data\\hackerrank\\integrations\\applicant-tracking-systems\\greenhouse\\3678461564-greenhouse-hackerrank-integration-faqs.md",
+      "product_area": "integrations",
+      "score": 0.016393,
+      "bm25_rank": 1,
+      "dense_rank": 0
+    },
+    {
+      "chunk_id": "cbe5284b3e3a",
+      "doc_path": "data\\hackerrank\\screen\\test-integrity\\5663779659-proctor-mode.md",
+      "product_area": "screen",
+      "score": 0.016393,
+      "bm25_rank": 0,
+      "dense_rank": 1
+    },
+    {
+      "chunk_id": "aed97e081ec7",
+      "doc_path": "data\\hackerrank\\integrations\\scheduling\\1262999130-hackerrank-interview-and-google-calendar-integration.md",
+      "product_area": "integrations",
+      "score": 0.016129,
+      "bm25_rank": 2,
+      "dense_rank": 0
+    },
+    {
+      "chunk_id": "fbe183e4d1ff",
+      "doc_path": "data\\hackerrank\\general-help\\release-notes\\8474307750-october-2025-release-notes.md",
+      "product_area": "general_help",
+      "score": 0.016129,
+      "bm25_rank": 0,
+      "dense_rank": 2
+    },
+    {
+      "chunk_id": "90434d876359",
+      "doc_path": "data\\hackerrank\\integrations\\scheduling\\2480863637-hackerrank-interview-and-outlook-calendar-integration.md",
+      "product_area": "integrations",
+      "score": 0.015873,
+      "bm25_rank": 3,
+      "dense_rank": 0
+    },
+    {
+      "chunk_id": "aab746a7355f",
+      "doc_path": "data\\hackerrank\\screen\\test-integrity\\9264843630-best-practices-for-running-group-assessments-in-proctor-mode.md",
+      "product_area": "screen",
+      "score": 0.015873,
+      "bm25_rank": 0,
+      "dense_rank": 3
+    },
+    {
+      "chunk_id": "9a2ce2bb57d9",
+      "doc_path": "data\\hackerrank\\integrations\\scheduling\\7401637722-interviewplanner-hackerrank-integration-faqs-.md",
+      "product_area": "integrations",
+      "score": 0.015625,
+      "bm25_rank": 4,
+      "dense_rank": 0
+    }
+  ],
+  "grounded": {
+    "response": "To troubleshoot the Zoom connectivity issue preventing you from taking the test, please try the following:\n\n1.  **Reopen the challenge:** Close the current test window and reopen it using the same challenge link.\n2.  **Use a supported browser:** Try accessing the challenge in a different supported browser, such as the latest versions of Chrome, Firefox, or Edge. This ensures full compatibility.\n3.  **Check internet connection:** Ensure your internet connection is stable. A minimum bandwidth of 5 Mbps per candidate is recommended, with 10 Mbps for optimal performance.\n\nIf you continue to experience issues, please contact HackerRank support at help@hackerrank.com.",
+    "cited_chunk_ids": [
+      "bb27a4e5e410"
+    ],
+    "product_area": "community",
+    "confidence": "med",
+    "insufficient_corpus": false,
+    "can_act_unilaterally": true,
+    "reasoning": "The user is experiencing a blocker with a compatibility check, specifically Zoom connectivity. Chunk bb27a4e5e410 provides general troubleshooting steps for challenges not loading or showing processing messages, including checking internet connection and using supported browsers, which are relevant to compatibility issues. While it doesn't specifically mention Zoom, these general steps are the most applicable from the provided chunks."
+  },
+  "final": {
+    "status": "replied",
+    "product_area": "community",
+    "response": "To troubleshoot the Zoom connectivity issue preventing you from taking the test, please try the following:\n\n1.  **Reopen the challenge:** Close the current test window and reopen it using the same challenge link.\n2.  **Use a supported browser:** Try accessing the challenge in a different supported browser, such as the latest versions of Chrome, Firefox, or Edge. This ensures full compatibility.\n3.  **Check internet connection:** Ensure your internet connection is stable. A minimum bandwidth of 5 Mbps per candidate is recommended, with 10 Mbps for optimal performance.\n\nIf you continue to experience issues, please contact HackerRank support at help@hackerrank.com.",
+    "justification": "Grounded reply from 1 chunk(s) at confidence=med. The user is experiencing a blocker with a compatibility check, specifically Zoom connectivity. Chunk bb27a4e5e410 provides general troubleshooting steps for challenges not loading or showing processing messages, including checking internet connection and using supported browsers, which are relevant to compatibility issues. While it doesn't specifically mention Zoom, these general steps are the most applicable from the provided chunks.",
+    "request_type": "product_issue"
+  },
+  "timings_ms": {
+    "triage_ms": 6367.8,
+    "retrieve_ms": 60.6,
+    "ground_ms": 9077.9,
+    "gate_ms": 0.0,
+    "total_ms": 15506.3
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "row_index": 4,
+  "input": {
+    "issue": "Hi there\n\nWe have sent a candidate a Hackerrank assessment already, but we have been informed that they require extra time. As the assessment is 105 minutes, they need an extra 50% extra time added (so around 53 minutes) in addition.\n\nPlease can you provide step-by-step instruction on how we are to reinvite them.\n\nDo we find their profile in 'Candidates' , put in Add time 53 minutes and then click 'reinvite' and send the email? The email to the candidate says 105 minutes as the duration though still so not sure how we can check?\n\nThanks",
+    "subject": "How to reinvite candidate to Hackerrank \nassessment and add extra time",
+    "company": "HackerRank"
+  },
+  "triage": {
+    "detected_company": "HackerRank",
+    "sub_requests": [
+      "provide step-by-step instructions on reinviting a candidate",
+      "add extra time to a candidate's assessment"
+    ],
+    "scope": "in_scope",
+    "risk": "low",
+    "request_type_hint": "product_issue",
+    "product_area_hint": "candidate_management",
+    "asks_unilateral_action": false,
+    "short_circuit": "none",
+    "reasoning": "The user is asking for instructions on how to reinvite a candidate and add extra time to their assessment, which is a legitimate question about the HackerRank platform."
+  },
+  "retrieval": [
+    {
+      "chunk_id": "9109c9186aaf",
+      "doc_path": "data\\hackerrank\\integrations\\applicant-tracking-systems\\workday\\1999755553-workday---hackerrank-tests-user-guide.md",
+      "product_area": "integrations",
+      "score": 0.029877,
+      "bm25_rank": 9,
+      "dense_rank": 5
+    },
+    {
+      "chunk_id": "082827481bfe",
+      "doc_path": "data\\hackerrank\\screen\\managing-tests\\4811403281-adding-extra-time-for-candidates.md",
+      "product_area": "screen",
+      "score": 0.029437,
+      "bm25_rank": 6,
+      "dense_rank": 10
+    },
+    {
+      "chunk_id": "98a6d47e6b06",
+      "doc_path": "data\\hackerrank\\uncategorized\\9695299159-onboarding-candidates.md",
+      "product_area": "uncategorized",
+      "score": 0.016393,
+      "bm25_rank": 1,
+      "dense_rank": 0
+    },
+    {
+      "chunk_id": "c9c0c4eb8bc9",
+      "doc_path": "data\\hackerrank\\screen\\managing-tests\\4811403281-adding-extra-time-for-candidates.md",
+      "product_area": "screen",
+      "score": 0.016393,
+      "bm25_rank": 0,
+      "dense_rank": 1
+    },
+    {
+      "chunk_id": "24dc476b8efc",
+      "doc_path": "data\\hackerrank\\screen\\best-practice-guides\\5269412517-mitigating-candidate-drop-off.md",
+      "product_area": "screen",
+      "score": 0.016129,
+      "bm25_rank": 2,
+      "dense_rank": 0
+    },
+    {
+      "chunk_id": "be01060fb0c8",
+      "doc_path": "data\\hackerrank\\screen\\invite-candidates\\1002936098-reinviting-candidates-to-a-test.md",
+      "product_area": "screen",
+      "score": 0.016129,
+      "bm25_rank": 0,
+      "dense_rank": 2
+    },
+    {
+      "chunk_id": "90434d876359",
+      "doc_path": "data\\hackerrank\\integrations\\scheduling\\2480863637-hackerrank-interview-and-outlook-calendar-integration.md",
+      "product_area": "integrations",
+      "score": 0.015873,
+      "bm25_rank": 3,
+      "dense_rank": 0
+    },
+    {
+      "chunk_id": "12962a3e1615",
+      "doc_path": "data\\hackerrank\\integrations\\applicant-tracking-systems\\jobvite\\2429924508-jobvite---hackerrank-integration-user-guide.md",
+      "product_area": "integrations",
+      "score": 0.015873,
+      "bm25_rank": 0,
+      "dense_rank": 3
+    }
+  ],
+  "grounded": {
+    "response": "To reinvite a candidate to a test and add extra time, follow these steps:\n\n1. Log in to your **HackerRank for Work** account.\n2. Go to the **Tests** tab and select the test you want to modify.\n3. Go to the **Candidates** tab and select the checkbox next to the candidate you want to reinvite.\n4. Click **More > Add Time** and enter the extra time in minutes (e.g., 53 minutes for a 50% extension).\n5. Click **Confirm** to add the extra time.\n6. Then, click **Invite selected** to reinvite the candidate to the test.\n\nNote: When you reinvite a candidate, their previous report is automatically deleted. If you need to recover a deleted report, contact [support@hackerrank.com](mailto:support@hackerrank.com).",
+    "cited_chunk_ids": [
+      "082827481bfe",
+      "be01060fb0c8"
+    ],
+    "product_area": "screen",
+    "confidence": "high",
+    "insufficient_corpus": false,
+    "can_act_unilaterally": true,
+    "reasoning": "Chunks provide step-by-step instructions for reinviting a candidate and adding extra time to their test."
+  },
+  "final": {
+    "status": "replied",
+    "product_area": "screen",
+    "response": "To reinvite a candidate to a test and add extra time, follow these steps:\n\n1. Log in to your **HackerRank for Work** account.\n2. Go to the **Tests** tab and select the test you want to modify.\n3. Go to the **Candidates** tab and select the checkbox next to the candidate you want to reinvite.\n4. Click **More > Add Time** and enter the extra time in minutes (e.g., 53 minutes for a 50% extension).\n5. Click **Confirm** to add the extra time.\n6. Then, click **Invite selected** to reinvite the candidate to the test.\n\nNote: When you reinvite a candidate, their previous report is automatically deleted. If you need to recover a deleted report, contact [support@hackerrank.com](mailto:support@hackerrank.com).",
+    "justification": "Grounded reply from 2 chunk(s) at confidence=high. Chunks provide step-by-step instructions for reinviting a candidate and adding extra time to their test.",
+    "request_type": "product_issue"
+  },
+  "timings_ms": {
+    "triage_ms": 15805.7,
+    "retrieve_ms": 113.8,
+    "ground_ms": 35596.4,
+    "gate_ms": 0.0,
+    "total_ms": 51516.0
+  }
+}

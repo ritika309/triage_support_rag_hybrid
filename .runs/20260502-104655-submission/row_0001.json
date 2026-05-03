@@ -1,0 +1,36 @@
+{
+  "row_index": 1,
+  "input": {
+    "issue": "I lost access to my Claude team workspace after our IT admin removed my seat. \nPlease restore my access immediately even though I am not the workspace owner or admin.",
+    "subject": "Claude access lost",
+    "company": "Claude"
+  },
+  "triage": {
+    "detected_company": "Claude",
+    "sub_requests": [
+      "restore my access to the Claude team workspace",
+      "restore access immediately even though I am not the workspace owner or admin"
+    ],
+    "scope": "in_scope",
+    "risk": "high",
+    "request_type_hint": "product_issue",
+    "product_area_hint": "admin_management",
+    "asks_unilateral_action": true,
+    "short_circuit": "unilateral",
+    "reasoning": "User explicitly asks to bypass admin/owner authority, which the corpus does not authorize."
+  },
+  "retrieval": [],
+  "grounded": null,
+  "final": {
+    "status": "escalated",
+    "product_area": "uncategorized",
+    "response": "Escalate to a human",
+    "justification": "Ticket demands an action support cannot grant from documentation alone. User explicitly asks to bypass admin/owner authority, which the corpus does not authorize.",
+    "request_type": "product_issue"
+  },
+  "timings_ms": {
+    "triage_ms": 39958.6,
+    "gate_ms": 126.3,
+    "total_ms": 40084.9
+  }
+}

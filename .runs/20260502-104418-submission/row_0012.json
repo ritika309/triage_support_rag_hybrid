@@ -1,0 +1,35 @@
+{
+  "row_index": 12,
+  "input": {
+    "issue": "it’s not working, help",
+    "subject": "Help needed",
+    "company": null
+  },
+  "triage": {
+    "detected_company": "None",
+    "sub_requests": [
+      "it's not working"
+    ],
+    "scope": "social",
+    "risk": "low",
+    "request_type_hint": "invalid",
+    "product_area_hint": "",
+    "asks_unilateral_action": false,
+    "short_circuit": "ack",
+    "reasoning": "Pure thank-you with no support request."
+  },
+  "retrieval": [],
+  "grounded": null,
+  "final": {
+    "status": "replied",
+    "product_area": "",
+    "response": "Happy to help",
+    "justification": "Triage detected a pure acknowledgement; no request to handle.",
+    "request_type": "invalid"
+  },
+  "timings_ms": {
+    "triage_ms": 6426.8,
+    "gate_ms": 0.0,
+    "total_ms": 6426.9
+  }
+}

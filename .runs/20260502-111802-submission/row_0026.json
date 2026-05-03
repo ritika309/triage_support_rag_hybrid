@@ -1,0 +1,112 @@
+{
+  "row_index": 26,
+  "input": {
+    "issue": "I am facing multiple issues in my project. all requests to claude with aws bedrock is failing",
+    "subject": "Issues in Project",
+    "company": "Claude"
+  },
+  "triage": {
+    "detected_company": "Claude",
+    "sub_requests": [
+      "troubleshoot failing requests to Claude via AWS Bedrock"
+    ],
+    "scope": "in_scope",
+    "risk": "high",
+    "request_type_hint": "bug",
+    "product_area_hint": "aws_bedrock_integration",
+    "asks_unilateral_action": false,
+    "short_circuit": "none",
+    "reasoning": "The user is reporting a bug with Claude integration via AWS Bedrock, which requires troubleshooting and potentially retrieval of technical documentation."
+  },
+  "retrieval": [
+    {
+      "chunk_id": "34ab4d3b1923",
+      "doc_path": "data\\claude\\amazon-bedrock\\7996921-i-use-claude-in-amazon-bedrock-who-do-i-contact-for-customer-support-inquiries.md",
+      "product_area": "amazon_bedrock",
+      "score": 0.032002,
+      "bm25_rank": 3,
+      "dense_rank": 2
+    },
+    {
+      "chunk_id": "ae36f744fb22",
+      "doc_path": "data\\claude\\amazon-bedrock\\7996918-what-is-amazon-bedrock.md",
+      "product_area": "amazon_bedrock",
+      "score": 0.030777,
+      "bm25_rank": 6,
+      "dense_rank": 4
+    },
+    {
+      "chunk_id": "878a7ffb02fd",
+      "doc_path": "data\\claude\\claude-code\\launch-guides\\14552646-troubleshoot-claude-code-installation-and-authentication.md",
+      "product_area": "claude_code",
+      "score": 0.030118,
+      "bm25_rank": 4,
+      "dense_rank": 9
+    },
+    {
+      "chunk_id": "c155d8a895ea",
+      "doc_path": "data\\claude\\amazon-bedrock\\7996920-how-do-i-get-access-to-claude-in-amazon-bedrock.md",
+      "product_area": "amazon_bedrock",
+      "score": 0.029857,
+      "bm25_rank": 8,
+      "dense_rank": 6
+    },
+    {
+      "chunk_id": "cddee9b182a5",
+      "doc_path": "data\\claude\\claude\\account-management\\13756069-public-sector-faqs.md",
+      "product_area": "account_management",
+      "score": 0.029631,
+      "bm25_rank": 7,
+      "dense_rank": 8
+    },
+    {
+      "chunk_id": "70a5bb0f5c9d",
+      "doc_path": "data\\claude\\claude-code\\12386420-claude-code-faq.md",
+      "product_area": "claude_code",
+      "score": 0.029031,
+      "bm25_rank": 16,
+      "dense_rank": 3
+    },
+    {
+      "chunk_id": "d7d2a25a9de8",
+      "doc_path": "data\\claude\\amazon-bedrock\\10280783-where-do-i-find-claude-in-amazon-bedrock-documentation.md",
+      "product_area": "amazon_bedrock",
+      "score": 0.028624,
+      "bm25_rank": 13,
+      "dense_rank": 7
+    },
+    {
+      "chunk_id": "4819a3a89bab",
+      "doc_path": "data\\claude\\amazon-bedrock\\10280791-what-aws-regions-are-claude-models-available-in-amazon-bedrock.md",
+      "product_area": "amazon_bedrock",
+      "score": 0.02837,
+      "bm25_rank": 11,
+      "dense_rank": 10
+    }
+  ],
+  "grounded": {
+    "response": "If you are experiencing issues with requests to Claude via AWS Bedrock, please contact AWS Support directly. You can reach them via the [AWS Support contact page](https://aws.amazon.com/contact-us/). If you have a private offer and a direct contract with Anthropic for your Bedrock usage, you may also reach out to your Anthropic relationship manager.",
+    "cited_chunk_ids": [
+      "34ab4d3b1923"
+    ],
+    "product_area": "amazon_bedrock",
+    "confidence": "high",
+    "insufficient_corpus": false,
+    "can_act_unilaterally": true,
+    "reasoning": "The user is experiencing issues with Claude via AWS Bedrock, and the provided chunk directs them to contact AWS Support for such inquiries."
+  },
+  "final": {
+    "status": "replied",
+    "product_area": "amazon_bedrock",
+    "response": "If you are experiencing issues with requests to Claude via AWS Bedrock, please contact AWS Support directly. You can reach them via the [AWS Support contact page](https://aws.amazon.com/contact-us/). If you have a private offer and a direct contract with Anthropic for your Bedrock usage, you may also reach out to your Anthropic relationship manager.",
+    "justification": "Grounded reply from 1 chunk(s) at confidence=high. The user is experiencing issues with Claude via AWS Bedrock, and the provided chunk directs them to contact AWS Support for such inquiries.",
+    "request_type": "bug"
+  },
+  "timings_ms": {
+    "triage_ms": 3086.4,
+    "retrieve_ms": 7199.5,
+    "ground_ms": 2568.8,
+    "gate_ms": 0.0,
+    "total_ms": 12854.8
+  }
+}

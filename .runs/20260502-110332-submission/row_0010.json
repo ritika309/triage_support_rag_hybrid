@@ -1,0 +1,112 @@
+{
+  "row_index": 10,
+  "input": {
+    "issue": "I would like to request a rescheduling of my  company \"Company Name\" HackerRank assessment due to unforeseen circumstances \nthat prevented me from attending the test at the scheduled time.\nI am very interested in this opportunity and would be grateful if you could \nprovide me with an alternative date and time to complete the assessment.\nThank you for your understanding and support.",
+    "subject": "",
+    "company": "HackerRank"
+  },
+  "triage": {
+    "detected_company": "HackerRank",
+    "sub_requests": [
+      "reschedule assessment"
+    ],
+    "scope": "in_scope",
+    "risk": "low",
+    "request_type_hint": "product_issue",
+    "product_area_hint": "assessment_scheduling",
+    "asks_unilateral_action": false,
+    "short_circuit": "none",
+    "reasoning": "User is requesting to reschedule an assessment, which is a standard support request that can be handled by retrieving relevant documentation."
+  },
+  "retrieval": [
+    {
+      "chunk_id": "7e965aa57ed8",
+      "doc_path": "data\\hackerrank\\interviews\\manage-interviews\\2342466364-rescheduling-an-interview.md",
+      "product_area": "interviews",
+      "score": 0.02938,
+      "bm25_rank": 17,
+      "dense_rank": 1
+    },
+    {
+      "chunk_id": "2b8ae260a064",
+      "doc_path": "data\\hackerrank\\uncategorized\\9695299159-onboarding-candidates.md",
+      "product_area": "uncategorized",
+      "score": 0.028039,
+      "bm25_rank": 15,
+      "dense_rank": 8
+    },
+    {
+      "chunk_id": "24dc476b8efc",
+      "doc_path": "data\\hackerrank\\screen\\best-practice-guides\\5269412517-mitigating-candidate-drop-off.md",
+      "product_area": "screen",
+      "score": 0.016393,
+      "bm25_rank": 1,
+      "dense_rank": 0
+    },
+    {
+      "chunk_id": "98a6d47e6b06",
+      "doc_path": "data\\hackerrank\\uncategorized\\9695299159-onboarding-candidates.md",
+      "product_area": "uncategorized",
+      "score": 0.016129,
+      "bm25_rank": 2,
+      "dense_rank": 0
+    },
+    {
+      "chunk_id": "950fa77cba2f",
+      "doc_path": "data\\hackerrank\\general-help\\important-notifications\\2086891729-hackerrank-maintenance-window-notification.md",
+      "product_area": "general_help",
+      "score": 0.016129,
+      "bm25_rank": 0,
+      "dense_rank": 2
+    },
+    {
+      "chunk_id": "af2933a20cb3",
+      "doc_path": "data\\hackerrank\\skillup\\getting-started\\4624433684-hackerrank-skillup.md",
+      "product_area": "skillup",
+      "score": 0.015873,
+      "bm25_rank": 3,
+      "dense_rank": 0
+    },
+    {
+      "chunk_id": "f42f9d1d19a1",
+      "doc_path": "data\\hackerrank\\screen\\invite-candidates\\6257623198-cancelling-a-test-invite.md",
+      "product_area": "screen",
+      "score": 0.015873,
+      "bm25_rank": 0,
+      "dense_rank": 3
+    },
+    {
+      "chunk_id": "00af38c593b1",
+      "doc_path": "data\\hackerrank\\integrations\\applicant-tracking-systems\\greenhouse\\3678461564-greenhouse-hackerrank-integration-faqs.md",
+      "product_area": "integrations",
+      "score": 0.015625,
+      "bm25_rank": 4,
+      "dense_rank": 0
+    }
+  ],
+  "grounded": {
+    "response": "To reschedule your HackerRank assessment, please follow these steps:\n\n1. Log in to your HackerRank for Work account.\n2. Navigate to the **Interviews** section and then to the **Interview List**.\n3. Locate and click on the interview you wish to reschedule.\n4. In the Interview Details panel, click **Invite Participants**.\n5. Update the date and time fields to your desired new schedule.\n\nHackerRank will automatically send email notifications to the candidate and interviewers with the updated time.",
+    "cited_chunk_ids": [
+      "7e965aa57ed8"
+    ],
+    "product_area": "interviews",
+    "confidence": "high",
+    "insufficient_corpus": false,
+    "can_act_unilaterally": true,
+    "reasoning": "The user is requesting to reschedule an assessment, and chunk 7e965aa57ed8 provides the exact steps for rescheduling an interview within the HackerRank platform."
+  },
+  "final": {
+    "status": "replied",
+    "product_area": "interviews",
+    "response": "To reschedule your HackerRank assessment, please follow these steps:\n\n1. Log in to your HackerRank for Work account.\n2. Navigate to the **Interviews** section and then to the **Interview List**.\n3. Locate and click on the interview you wish to reschedule.\n4. In the Interview Details panel, click **Invite Participants**.\n5. Update the date and time fields to your desired new schedule.\n\nHackerRank will automatically send email notifications to the candidate and interviewers with the updated time.",
+    "justification": "Grounded reply from 1 chunk(s) at confidence=high. The user is requesting to reschedule an assessment, and chunk 7e965aa57ed8 provides the exact steps for rescheduling an interview within the HackerRank platform.",
+    "request_type": "product_issue"
+  },
+  "timings_ms": {
+    "triage_ms": 7617.3,
+    "retrieve_ms": 85.0,
+    "ground_ms": 6746.0,
+    "gate_ms": 0.0,
+    "total_ms": 14448.5
+  }
+}

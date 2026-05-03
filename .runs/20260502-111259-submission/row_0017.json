@@ -1,0 +1,110 @@
+{
+  "row_index": 17,
+  "input": {
+    "issue": "Resume Builder is Down",
+    "subject": "Help in creating resume",
+    "company": "HackerRank"
+  },
+  "triage": {
+    "detected_company": "HackerRank",
+    "sub_requests": [
+      "report Resume Builder is down"
+    ],
+    "scope": "in_scope",
+    "risk": "high",
+    "request_type_hint": "bug",
+    "product_area_hint": "resume_builder",
+    "asks_unilateral_action": false,
+    "short_circuit": "none",
+    "reasoning": "The user is reporting a bug with the Resume Builder tool, which is a valid in-scope request for HackerRank."
+  },
+  "retrieval": [
+    {
+      "chunk_id": "76b76b62ea09",
+      "doc_path": "data\\hackerrank\\hackerrank_community\\additional-resources\\job-search-and-applications\\9106957203-create-a-resume-with-resume-builder.md",
+      "product_area": "community",
+      "score": 0.032787,
+      "bm25_rank": 1,
+      "dense_rank": 1
+    },
+    {
+      "chunk_id": "9f5eefbf325e",
+      "doc_path": "data\\hackerrank\\hackerrank_community\\additional-resources\\job-search-and-applications\\9106957203-create-a-resume-with-resume-builder.md",
+      "product_area": "community",
+      "score": 0.032258,
+      "bm25_rank": 2,
+      "dense_rank": 2
+    },
+    {
+      "chunk_id": "6e3f474aa5f0",
+      "doc_path": "data\\hackerrank\\skillup\\getting-started\\8522032191-skillup-employee-platform.md",
+      "product_area": "skillup",
+      "score": 0.029199,
+      "bm25_rank": 8,
+      "dense_rank": 9
+    },
+    {
+      "chunk_id": "f2eb76c668f1",
+      "doc_path": "data\\hackerrank\\hackerrank_community\\additional-resources\\job-search-and-applications\\1560975739-search-for-jobs.md",
+      "product_area": "community",
+      "score": 0.028446,
+      "bm25_rank": 4,
+      "dense_rank": 18
+    },
+    {
+      "chunk_id": "248b70d5acc3",
+      "doc_path": "data\\hackerrank\\hackerrank_community\\getting-started\\1995877061-introduction-to-hackerrank-community.md",
+      "product_area": "community",
+      "score": 0.015873,
+      "bm25_rank": 3,
+      "dense_rank": 0
+    },
+    {
+      "chunk_id": "bb74bfa4af89",
+      "doc_path": "data\\hackerrank\\skillup\\getting-started\\4329363164-accessing-skillup-employer-platform.md",
+      "product_area": "skillup",
+      "score": 0.015873,
+      "bm25_rank": 0,
+      "dense_rank": 3
+    },
+    {
+      "chunk_id": "1128e1f69a0d",
+      "doc_path": "data\\hackerrank\\general-help\\release-notes\\8474307750-october-2025-release-notes.md",
+      "product_area": "general_help",
+      "score": 0.015625,
+      "bm25_rank": 0,
+      "dense_rank": 4
+    },
+    {
+      "chunk_id": "37af5d4dbf81",
+      "doc_path": "data\\hackerrank\\general-help\\release-notes\\1189675016-october-2024-release-notes.md",
+      "product_area": "general_help",
+      "score": 0.015385,
+      "bm25_rank": 5,
+      "dense_rank": 0
+    }
+  ],
+  "grounded": {
+    "response": "I'll need to escalate this to a human support specialist for review, as I cannot access the current status of the Resume Builder.",
+    "cited_chunk_ids": [],
+    "product_area": "community",
+    "confidence": "low",
+    "insufficient_corpus": true,
+    "can_act_unilaterally": true,
+    "reasoning": "The user is reporting that the Resume Builder is down. While chunks describe how to use the Resume Builder, none of them provide information on its current operational status or how to report an outage."
+  },
+  "final": {
+    "status": "escalated",
+    "product_area": "community",
+    "response": "Escalate to a human",
+    "justification": "No grounded answer in the corpus for this ticket. The user is reporting that the Resume Builder is down. While chunks describe how to use the Resume Builder, none of them provide information on its current operational status or how to report an outage.",
+    "request_type": "bug"
+  },
+  "timings_ms": {
+    "triage_ms": 6339.5,
+    "retrieve_ms": 27.1,
+    "ground_ms": 8186.9,
+    "gate_ms": 0.0,
+    "total_ms": 14553.5
+  }
+}

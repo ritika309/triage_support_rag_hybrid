@@ -1,0 +1,114 @@
+{
+  "row_index": 16,
+  "input": {
+    "issue": "My identity has been stolen, wat should I do",
+    "subject": "Identity Theft",
+    "company": "Visa"
+  },
+  "triage": {
+    "detected_company": "Visa",
+    "sub_requests": [
+      "guidance on identity theft"
+    ],
+    "scope": "in_scope",
+    "risk": "high",
+    "request_type_hint": "product_issue",
+    "product_area_hint": "fraud_and_security",
+    "asks_unilateral_action": false,
+    "short_circuit": "none",
+    "reasoning": "Identity theft is a high-risk topic, but the user is asking for guidance, which can likely be found in the Visa corpus."
+  },
+  "retrieval": [
+    {
+      "chunk_id": "f2afaffa38ab",
+      "doc_path": "data\\visa\\support.md",
+      "product_area": "general_support",
+      "score": 0.032266,
+      "bm25_rank": 1,
+      "dense_rank": 3
+    },
+    {
+      "chunk_id": "b3c1f29374b2",
+      "doc_path": "data\\visa\\support\\small-business\\data-security.md",
+      "product_area": "small_business",
+      "score": 0.031319,
+      "bm25_rank": 7,
+      "dense_rank": 1
+    },
+    {
+      "chunk_id": "0c904053538d",
+      "doc_path": "data\\visa\\support\\consumer\\travelers-cheques.md",
+      "product_area": "travel_support",
+      "score": 0.03101,
+      "bm25_rank": 4,
+      "dense_rank": 5
+    },
+    {
+      "chunk_id": "ab92d7b3fc41",
+      "doc_path": "data\\visa\\support\\small-business\\fraud-protection.md",
+      "product_area": "small_business",
+      "score": 0.03101,
+      "bm25_rank": 5,
+      "dense_rank": 4
+    },
+    {
+      "chunk_id": "0ae44eb3c9a4",
+      "doc_path": "data\\visa\\support\\consumer\\travelers-cheques.md",
+      "product_area": "travel_support",
+      "score": 0.030415,
+      "bm25_rank": 2,
+      "dense_rank": 10
+    },
+    {
+      "chunk_id": "fb97c32de9a6",
+      "doc_path": "data\\visa\\support\\small-business\\fraud-protection.md",
+      "product_area": "small_business",
+      "score": 0.029418,
+      "bm25_rank": 9,
+      "dense_rank": 7
+    },
+    {
+      "chunk_id": "d25854e96f1e",
+      "doc_path": "data\\visa\\support\\small-business\\data-security.md",
+      "product_area": "small_business",
+      "score": 0.029412,
+      "bm25_rank": 8,
+      "dense_rank": 8
+    },
+    {
+      "chunk_id": "3101da88496d",
+      "doc_path": "data\\visa\\support\\small-business\\fraud-protection.md",
+      "product_area": "small_business",
+      "score": 0.028778,
+      "bm25_rank": 10,
+      "dense_rank": 9
+    }
+  ],
+  "grounded": {
+    "response": "If your identity has been stolen, you should take immediate action. For credit card related issues, please contact your issuer or bank using the freephone number on your Visa card. They can help you dispute charges, understand why a card was declined, or report a lost or stolen card.\n\nIf your Visa Traveller's Cheques are lost or stolen, you should immediately call the issuing bank. If you cannot find the issuing bank's contact details, you can contact Visa for assistance.\n\nFor businesses suspecting fraud or a data breach, it is crucial to respond quickly. Contact your acquiring bank immediately and follow the response checklist, which includes monitoring systems, detaching at-risk systems from the network, saving logs, and alerting internal security teams. You must deliver an incident report to your acquirer within 3 working days.",
+    "cited_chunk_ids": [
+      "f2afaffa38ab",
+      "0c904053538d",
+      "b3c1f29374b2"
+    ],
+    "product_area": "general_support",
+    "confidence": "med",
+    "insufficient_corpus": false,
+    "can_act_unilaterally": true,
+    "reasoning": "The corpus provides guidance for credit card issues, lost/stolen traveler's cheques, and business fraud/data breaches, which are relevant to identity theft."
+  },
+  "final": {
+    "status": "replied",
+    "product_area": "general_support",
+    "response": "If your identity has been stolen, you should take immediate action. For credit card related issues, please contact your issuer or bank using the freephone number on your Visa card. They can help you dispute charges, understand why a card was declined, or report a lost or stolen card.\n\nIf your Visa Traveller's Cheques are lost or stolen, you should immediately call the issuing bank. If you cannot find the issuing bank's contact details, you can contact Visa for assistance.\n\nFor businesses suspecting fraud or a data breach, it is crucial to respond quickly. Contact your acquiring bank immediately and follow the response checklist, which includes monitoring systems, detaching at-risk systems from the network, saving logs, and alerting internal security teams. You must deliver an incident report to your acquirer within 3 working days.",
+    "justification": "Grounded reply from 3 chunk(s) at confidence=med. The corpus provides guidance for credit card issues, lost/stolen traveler's cheques, and business fraud/data breaches, which are relevant to identity theft.",
+    "request_type": "product_issue"
+  },
+  "timings_ms": {
+    "triage_ms": 6913.7,
+    "retrieve_ms": 25.9,
+    "ground_ms": 8598.8,
+    "gate_ms": 0.0,
+    "total_ms": 15538.5
+  }
+}

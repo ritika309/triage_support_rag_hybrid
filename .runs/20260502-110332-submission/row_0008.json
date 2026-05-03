@@ -1,0 +1,112 @@
+{
+  "row_index": 8,
+  "input": {
+    "issue": "none of the submissions across any challenges are working on your website",
+    "subject": "Issue while taking the test",
+    "company": "HackerRank"
+  },
+  "triage": {
+    "detected_company": "HackerRank",
+    "sub_requests": [
+      "submissions not working across any challenges"
+    ],
+    "scope": "in_scope",
+    "risk": "high",
+    "request_type_hint": "bug",
+    "product_area_hint": "test_submission",
+    "asks_unilateral_action": false,
+    "short_circuit": "none",
+    "reasoning": "The user is reporting a widespread bug affecting test submissions across the platform, which requires investigation."
+  },
+  "retrieval": [
+    {
+      "chunk_id": "bb27a4e5e410",
+      "doc_path": "data\\hackerrank\\hackerrank_community\\practice-coding-challenges\\1273631973-coding-challenges-faqs.md",
+      "product_area": "community",
+      "score": 0.031778,
+      "bm25_rank": 5,
+      "dense_rank": 1
+    },
+    {
+      "chunk_id": "98a6d47e6b06",
+      "doc_path": "data\\hackerrank\\uncategorized\\9695299159-onboarding-candidates.md",
+      "product_area": "uncategorized",
+      "score": 0.026667,
+      "bm25_rank": 15,
+      "dense_rank": 15
+    },
+    {
+      "chunk_id": "05930204b1ac",
+      "doc_path": "data\\hackerrank\\skillup\\getting-started\\7992263058-weekly-challenges.md",
+      "product_area": "skillup",
+      "score": 0.016393,
+      "bm25_rank": 1,
+      "dense_rank": 0
+    },
+    {
+      "chunk_id": "24dc476b8efc",
+      "doc_path": "data\\hackerrank\\screen\\best-practice-guides\\5269412517-mitigating-candidate-drop-off.md",
+      "product_area": "screen",
+      "score": 0.016129,
+      "bm25_rank": 2,
+      "dense_rank": 0
+    },
+    {
+      "chunk_id": "61ac6977ee99",
+      "doc_path": "data\\hackerrank\\screen\\frequently-asked-questions\\1202456939-how-to-try-a-question-or-a-test.md",
+      "product_area": "screen",
+      "score": 0.016129,
+      "bm25_rank": 0,
+      "dense_rank": 2
+    },
+    {
+      "chunk_id": "1c601cdd7a76",
+      "doc_path": "data\\hackerrank\\general-help\\release-notes\\9502641162-q3%27-23-release-notes.md",
+      "product_area": "general_help",
+      "score": 0.015873,
+      "bm25_rank": 3,
+      "dense_rank": 0
+    },
+    {
+      "chunk_id": "ef04a7cbb032",
+      "doc_path": "data\\hackerrank\\screen\\test-reports\\1972468979-understanding-errors-in-post-assessment-reports-for-coding-questions.md",
+      "product_area": "screen",
+      "score": 0.015873,
+      "bm25_rank": 0,
+      "dense_rank": 3
+    },
+    {
+      "chunk_id": "c3f1470c6604",
+      "doc_path": "data\\hackerrank\\screen\\best-practice-guides\\4291690360-plagiarism-best-practices-guide.md",
+      "product_area": "screen",
+      "score": 0.015625,
+      "bm25_rank": 4,
+      "dense_rank": 0
+    }
+  ],
+  "grounded": {
+    "response": "I'm sorry to hear you're having trouble with submissions. Here are a few steps you can try:\n\n1.  Close the challenge window and reopen it using the same challenge link.\n2.  Try opening the challenge in a different supported browser, such as the latest versions of Chrome, Firefox, or Edge.\n3.  Ensure your internet connection is stable.\n\nIf you continue to experience issues with submissions not working across any challenges, please contact HackerRank support at help@hackerrank.com.",
+    "cited_chunk_ids": [
+      "bb27a4e5e410"
+    ],
+    "product_area": "community",
+    "confidence": "med",
+    "insufficient_corpus": false,
+    "can_act_unilaterally": true,
+    "reasoning": "The user is experiencing issues with submissions not working. The provided chunk offers troubleshooting steps for challenges not loading or showing an infinite processing message, which is related to the user's issue. It also provides a contact email for further assistance."
+  },
+  "final": {
+    "status": "replied",
+    "product_area": "community",
+    "response": "I'm sorry to hear you're having trouble with submissions. Here are a few steps you can try:\n\n1.  Close the challenge window and reopen it using the same challenge link.\n2.  Try opening the challenge in a different supported browser, such as the latest versions of Chrome, Firefox, or Edge.\n3.  Ensure your internet connection is stable.\n\nIf you continue to experience issues with submissions not working across any challenges, please contact HackerRank support at help@hackerrank.com.",
+    "justification": "Grounded reply from 1 chunk(s) at confidence=med. The user is experiencing issues with submissions not working. The provided chunk offers troubleshooting steps for challenges not loading or showing an infinite processing message, which is related to the user's issue. It also provides a contact email for further assistance.",
+    "request_type": "bug"
+  },
+  "timings_ms": {
+    "triage_ms": 7120.3,
+    "retrieve_ms": 30.1,
+    "ground_ms": 8119.3,
+    "gate_ms": 0.0,
+    "total_ms": 15269.8
+  }
+}

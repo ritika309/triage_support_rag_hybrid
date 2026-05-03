@@ -1,0 +1,113 @@
+{
+  "row_index": 1,
+  "input": {
+    "issue": "I notice that people I assigned the test in October of 2025 have not received new tests. How long do the tests stay active in the system.",
+    "subject": "Test Active in the system",
+    "company": "HackerRank"
+  },
+  "triage": {
+    "detected_company": "HackerRank",
+    "sub_requests": [
+      "how long tests stay active"
+    ],
+    "scope": "in_scope",
+    "risk": "low",
+    "request_type_hint": "product_issue",
+    "product_area_hint": "test_settings",
+    "asks_unilateral_action": false,
+    "short_circuit": "none",
+    "reasoning": "Standard product FAQ about test settings."
+  },
+  "retrieval": [
+    {
+      "chunk_id": "665fe1af4501",
+      "doc_path": "data\\hackerrank\\screen\\managing-tests\\8415416322-archiving-a-test.md",
+      "product_area": "screen",
+      "score": 0.027584,
+      "bm25_rank": 19,
+      "dense_rank": 7
+    },
+    {
+      "chunk_id": "7dcd4ffe2931",
+      "doc_path": "data\\hackerrank\\settings\\open-api\\3094540490-candidate-status-in-api-results.md",
+      "product_area": "settings",
+      "score": 0.026585,
+      "bm25_rank": 11,
+      "dense_rank": 20
+    },
+    {
+      "chunk_id": "00af38c593b1",
+      "doc_path": "data\\hackerrank\\integrations\\applicant-tracking-systems\\greenhouse\\3678461564-greenhouse-hackerrank-integration-faqs.md",
+      "product_area": "integrations",
+      "score": 0.016393,
+      "bm25_rank": 1,
+      "dense_rank": 0
+    },
+    {
+      "chunk_id": "4007c9e28136",
+      "doc_path": "data\\hackerrank\\screen\\invite-candidates\\6027855406-inviting-candidates-to-a-test.md",
+      "product_area": "screen",
+      "score": 0.016393,
+      "bm25_rank": 0,
+      "dense_rank": 1
+    },
+    {
+      "chunk_id": "302b4205020a",
+      "doc_path": "data\\hackerrank\\screen\\test-reports\\9722863972-what-is-code-quality.md",
+      "product_area": "screen",
+      "score": 0.016129,
+      "bm25_rank": 2,
+      "dense_rank": 0
+    },
+    {
+      "chunk_id": "059fde55bc9c",
+      "doc_path": "data\\hackerrank\\screen\\managing-tests\\2979262079-modify-test-expiration-time.md",
+      "product_area": "screen",
+      "score": 0.016129,
+      "bm25_rank": 0,
+      "dense_rank": 2
+    },
+    {
+      "chunk_id": "a232d3ba8d15",
+      "doc_path": "data\\hackerrank\\screen\\frequently-asked-questions\\8754663182-what-is-the-maximum-number-of-candidates-i-can-assess-using-coding-assessments%3F.md",
+      "product_area": "screen",
+      "score": 0.015873,
+      "bm25_rank": 3,
+      "dense_rank": 0
+    },
+    {
+      "chunk_id": "97a62b487a49",
+      "doc_path": "data\\hackerrank\\screen\\frequently-asked-questions\\3765449705-i-made-changes-to-test-content.-when-does-it-take-effect-for-the-candidates%3F.md",
+      "product_area": "screen",
+      "score": 0.015873,
+      "bm25_rank": 0,
+      "dense_rank": 3
+    }
+  ],
+  "grounded": {
+    "response": "Tests in HackerRank remain active unless an expiration date is set. To set an expiration date, go to the test's **Settings > General**, and modify the **Start date & time** and **End date & time** in the **Test Expiration Time** section. After the test expires, invited candidates cannot access the test, and the **Invite** button is disabled.\n\nYou can also define how long a test invitation remains active by setting an expiry date when inviting candidates.",
+    "cited_chunk_ids": [
+      "059fde55bc9c",
+      "4007c9e28136"
+    ],
+    "product_area": "screen",
+    "confidence": "high",
+    "insufficient_corpus": false,
+    "can_act_unilaterally": true,
+    "reasoning": "Chunks 059fde55bc9c and 4007c9e28136 provide information on modifying test expiration time and inviting candidates, which directly addresses the user's question about how long tests stay active in the system."
+  },
+  "final": {
+    "status": "replied",
+    "product_area": "screen",
+    "response": "Tests in HackerRank remain active unless an expiration date is set. To set an expiration date, go to the test's **Settings > General**, and modify the **Start date & time** and **End date & time** in the **Test Expiration Time** section. After the test expires, invited candidates cannot access the test, and the **Invite** button is disabled.\n\nYou can also define how long a test invitation remains active by setting an expiry date when inviting candidates.",
+    "justification": "Grounded reply from 2 chunk(s) at confidence=high. Chunks 059fde55bc9c and 4007c9e28136 provide information on modifying test expiration time and inviting candidates, which directly addresses the user's question about how long tests stay active in the system.",
+    "request_type": "product_issue"
+  },
+  "timings_ms": {
+    "triage_ms": 1385.5,
+    "retrieve_ms": 7548.0,
+    "ground_ms": 4511.7,
+    "gate_ms": 0.1,
+    "total_ms": 13445.3
+  }
+}

@@ -1,0 +1,110 @@
+{
+  "row_index": 12,
+  "input": {
+    "issue": "it’s not working, help",
+    "subject": "Help needed",
+    "company": null
+  },
+  "triage": {
+    "detected_company": "None",
+    "sub_requests": [
+      "troubleshoot issue"
+    ],
+    "scope": "in_scope",
+    "risk": "low",
+    "request_type_hint": "product_issue",
+    "product_area_hint": "troubleshooting",
+    "asks_unilateral_action": false,
+    "short_circuit": "none",
+    "reasoning": "The user is asking for help with an unspecified issue, which requires retrieval to identify the product and provide troubleshooting steps."
+  },
+  "retrieval": [
+    {
+      "chunk_id": "d0d339604684",
+      "doc_path": "data\\claude\\safeguards\\13171706-crisis-helpline-support-in-claude.md",
+      "product_area": "safeguards",
+      "score": 0.030622,
+      "bm25_rank": 2,
+      "dense_rank": 9
+    },
+    {
+      "chunk_id": "af205b406ced",
+      "doc_path": "data\\claude\\safeguards\\13171706-crisis-helpline-support-in-claude.md",
+      "product_area": "safeguards",
+      "score": 0.028191,
+      "bm25_rank": 9,
+      "dense_rank": 13
+    },
+    {
+      "chunk_id": "70f64992b495",
+      "doc_path": "data\\claude\\claude\\features-and-capabilities\\11473015-retrieval-augmented-generation-rag-for-projects.md",
+      "product_area": "features_and_capabilities",
+      "score": 0.016393,
+      "bm25_rank": 1,
+      "dense_rank": 0
+    },
+    {
+      "chunk_id": "13370bcceb61",
+      "doc_path": "data\\claude\\team-and-enterprise-plans\\capabilities\\12489464-use-enterprise-search.md",
+      "product_area": "team_and_enterprise_plans",
+      "score": 0.016393,
+      "bm25_rank": 0,
+      "dense_rank": 1
+    },
+    {
+      "chunk_id": "67fb6c5f463d",
+      "doc_path": "data\\claude\\claude-api-and-console\\api-prompt-design\\7996857-my-prompt-isn-t-giving-me-a-helpful-answer.md",
+      "product_area": "claude_api_and_console",
+      "score": 0.016129,
+      "bm25_rank": 0,
+      "dense_rank": 2
+    },
+    {
+      "chunk_id": "22a84a7ca4f3",
+      "doc_path": "data\\claude\\claude-mobile-apps\\claude-for-android\\11869629-using-claude-with-android-apps.md",
+      "product_area": "claude_mobile_apps",
+      "score": 0.015873,
+      "bm25_rank": 3,
+      "dense_rank": 0
+    },
+    {
+      "chunk_id": "110577027a7d",
+      "doc_path": "data\\claude\\connectors\\pre-built-connectors\\12542951-enable-and-use-the-microsoft-365-connector.md",
+      "product_area": "connectors",
+      "score": 0.015873,
+      "bm25_rank": 0,
+      "dense_rank": 3
+    },
+    {
+      "chunk_id": "4149c1f7b35f",
+      "doc_path": "data\\claude\\claude-mobile-apps\\claude-for-ios\\11869619-using-claude-with-ios-apps.md",
+      "product_area": "claude_mobile_apps",
+      "score": 0.015625,
+      "bm25_rank": 4,
+      "dense_rank": 0
+    }
+  ],
+  "grounded": {
+    "response": "I'll need to escalate this to a human support specialist for review.",
+    "cited_chunk_ids": [],
+    "product_area": "general_help",
+    "confidence": "low",
+    "insufficient_corpus": true,
+    "can_act_unilaterally": true,
+    "reasoning": "The user's request is too vague ('it's not working, help') and the provided chunks do not offer any specific troubleshooting steps or guidance that can be applied without more information."
+  },
+  "final": {
+    "status": "escalated",
+    "product_area": "general_help",
+    "response": "Escalate to a human",
+    "justification": "No grounded answer in the corpus for this ticket. The user's request is too vague ('it's not working, help') and the provided chunks do not offer any specific troubleshooting steps or guidance that can be applied without more information.",
+    "request_type": "product_issue"
+  },
+  "timings_ms": {
+    "triage_ms": 6065.4,
+    "retrieve_ms": 39.0,
+    "ground_ms": 8084.3,
+    "gate_ms": 0.0,
+    "total_ms": 14188.8
+  }
+}

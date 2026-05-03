@@ -1,0 +1,37 @@
+{
+  "row_index": 2,
+  "input": {
+    "issue": "I completed a HackerRank test, but the recruiter rejected me. Please review my answers, i\nncrease my score, and tell the company to move me to the next round because \nthe platform must have graded me unfairly.",
+    "subject": "Test Score Dispute",
+    "company": "HackerRank"
+  },
+  "triage": {
+    "detected_company": "HackerRank",
+    "sub_requests": [
+      "review my answers",
+      "increase my score",
+      "tell the company to move me to the next round"
+    ],
+    "scope": "in_scope",
+    "risk": "high",
+    "request_type_hint": "product_issue",
+    "product_area_hint": "scoring_and_reports",
+    "asks_unilateral_action": true,
+    "short_circuit": "unilateral",
+    "reasoning": "User is demanding the platform override scores and intervene with the recruiter, which support cannot do unilaterally."
+  },
+  "retrieval": [],
+  "grounded": null,
+  "final": {
+    "status": "escalated",
+    "product_area": "uncategorized",
+    "response": "Escalate to a human",
+    "justification": "Ticket demands an action support cannot grant from documentation alone. User is demanding the platform override scores and intervene with the recruiter, which support cannot do unilaterally.",
+    "request_type": "product_issue"
+  },
+  "timings_ms": {
+    "triage_ms": 45241.4,
+    "gate_ms": 0.1,
+    "total_ms": 45241.5
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "row_index": 21,
+  "input": {
+    "issue": "I want Claude to stop crawling by website",
+    "subject": "Website Data crawl",
+    "company": "Claude"
+  },
+  "triage": {
+    "detected_company": "Claude",
+    "sub_requests": [
+      "stop website data crawl"
+    ],
+    "scope": "in_scope",
+    "risk": "low",
+    "request_type_hint": "product_issue",
+    "product_area_hint": "privacy",
+    "asks_unilateral_action": false,
+    "short_circuit": "none",
+    "reasoning": "User is asking about Claude's data crawling policy, which is a privacy-related question that can be answered by documentation."
+  },
+  "retrieval": [
+    {
+      "chunk_id": "9b73da0c469f",
+      "doc_path": "data\\claude\\privacy-and-legal\\8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler.md",
+      "product_area": "privacy",
+      "score": 0.032522,
+      "bm25_rank": 1,
+      "dense_rank": 2
+    },
+    {
+      "chunk_id": "5463daa60c72",
+      "doc_path": "data\\claude\\claude-in-chrome\\12902446-claude-in-chrome-permissions-guide.md",
+      "product_area": "claude_in_chrome",
+      "score": 0.030159,
+      "bm25_rank": 3,
+      "dense_rank": 10
+    },
+    {
+      "chunk_id": "e1f8ed3ad697",
+      "doc_path": "data\\claude\\claude-in-chrome\\12902428-using-claude-in-chrome-safely.md",
+      "product_area": "claude_in_chrome",
+      "score": 0.028405,
+      "bm25_rank": 8,
+      "dense_rank": 13
+    },
+    {
+      "chunk_id": "bd6ea67f16f5",
+      "doc_path": "data\\claude\\safeguards\\7996906-reporting-blocking-and-removing-content-from-claude.md",
+      "product_area": "safeguards",
+      "score": 0.028373,
+      "bm25_rank": 20,
+      "dense_rank": 3
+    },
+    {
+      "chunk_id": "e68165cae855",
+      "doc_path": "data\\claude\\claude\\features-and-capabilities\\10684626-enabling-and-using-web-search.md",
+      "product_area": "features_and_capabilities",
+      "score": 0.02781,
+      "bm25_rank": 19,
+      "dense_rank": 6
+    },
+    {
+      "chunk_id": "e3bffbcaae75",
+      "doc_path": "data\\claude\\privacy-and-legal\\8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler.md",
+      "product_area": "privacy",
+      "score": 0.016393,
+      "bm25_rank": 0,
+      "dense_rank": 1
+    },
+    {
+      "chunk_id": "21339dfe9f40",
+      "doc_path": "data\\claude\\privacy-and-legal\\12335811-report-a-concern-australian-dis-standard-compliance.md",
+      "product_area": "privacy",
+      "score": 0.016129,
+      "bm25_rank": 2,
+      "dense_rank": 0
+    },
+    {
+      "chunk_id": "cdf7af9aa5bb",
+      "doc_path": "data\\claude\\claude\\features-and-capabilities\\9547008-publishing-and-sharing-artifacts.md",
+      "product_area": "features_and_capabilities",
+      "score": 0.015625,
+      "bm25_rank": 4,
+      "dense_rank": 0
+    }
+  ],
+  "grounded": {
+    "response": "Anthropic uses various robots, including ClaudeBot, to gather data from the public web for model development and to retrieve web content. To prevent ClaudeBot from crawling your website, you can add directives to your `robots.txt` file.\n\nTo block ClaudeBot from your entire website, add the following to your `robots.txt` file:\n\n```\nUser-agent: ClaudeBot\nDisallow: /\n```\n\nThis directive should be placed in the `robots.txt` file in your top-level directory. You will need to do this for every subdomain you wish to opt out from.\n\nAnthropic's bots respect industry-standard directives in `robots.txt`, including the `Disallow` command.",
+    "cited_chunk_ids": [
+      "9b73da0c469f"
+    ],
+    "product_area": "privacy",
+    "confidence": "high",
+    "insufficient_corpus": false,
+    "can_act_unilaterally": true,
+    "reasoning": "The user wants to stop Claude from crawling their website. Chunk 9b73da0c469f directly addresses this by explaining that Anthropic uses robots like ClaudeBot and provides the exact `robots.txt` directives to block crawling."
+  },
+  "final": {
+    "status": "replied",
+    "product_area": "privacy",
+    "response": "Anthropic uses various robots, including ClaudeBot, to gather data from the public web for model development and to retrieve web content. To prevent ClaudeBot from crawling your website, you can add directives to your `robots.txt` file.\n\nTo block ClaudeBot from your entire website, add the following to your `robots.txt` file:\n\n```\nUser-agent: ClaudeBot\nDisallow: /\n```\n\nThis directive should be placed in the `robots.txt` file in your top-level directory. You will need to do this for every subdomain you wish to opt out from.\n\nAnthropic's bots respect industry-standard directives in `robots.txt`, including the `Disallow` command.",
+    "justification": "Grounded reply from 1 chunk(s) at confidence=high. The user wants to stop Claude from crawling their website. Chunk 9b73da0c469f directly addresses this by explaining that Anthropic uses robots like ClaudeBot and provides the exact `robots.txt` directives to block crawling.",
+    "request_type": "product_issue"
+  },
+  "timings_ms": {
+    "triage_ms": 7115.6,
+    "retrieve_ms": 41.5,
+    "ground_ms": 8319.9,
+    "gate_ms": 0.0,
+    "total_ms": 15477.1
+  }
+}

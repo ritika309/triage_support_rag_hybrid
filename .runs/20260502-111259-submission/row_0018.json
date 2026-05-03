@@ -1,0 +1,112 @@
+{
+  "row_index": 18,
+  "input": {
+    "issue": "Hello, I have completed an assessment, but my name is incorrect on the certificate. Can you please update it",
+    "subject": "Certificate name update",
+    "company": "HackerRank"
+  },
+  "triage": {
+    "detected_company": "HackerRank",
+    "sub_requests": [
+      "update incorrect name on certificate"
+    ],
+    "scope": "in_scope",
+    "risk": "low",
+    "request_type_hint": "product_issue",
+    "product_area_hint": "certificate_management",
+    "asks_unilateral_action": false,
+    "short_circuit": "none",
+    "reasoning": "User is requesting a correction to a certificate, which is a standard product issue that can be addressed through documented procedures."
+  },
+  "retrieval": [
+    {
+      "chunk_id": "c3dea32b17af",
+      "doc_path": "data\\hackerrank\\hackerrank_community\\certifications\\8941367927-certifications-faqs.md",
+      "product_area": "community",
+      "score": 0.032787,
+      "bm25_rank": 1,
+      "dense_rank": 1
+    },
+    {
+      "chunk_id": "d6ed766c40d6",
+      "doc_path": "data\\hackerrank\\hackerrank_community\\account-settings\\profile-and-preferences\\2857822759-update-personal-details.md",
+      "product_area": "community",
+      "score": 0.028039,
+      "bm25_rank": 15,
+      "dense_rank": 8
+    },
+    {
+      "chunk_id": "10a7e19d8f6e",
+      "doc_path": "data\\hackerrank\\skillup\\getting-started\\2960935422-get-started-with-certify.md",
+      "product_area": "skillup",
+      "score": 0.016129,
+      "bm25_rank": 2,
+      "dense_rank": 0
+    },
+    {
+      "chunk_id": "e29b01fba2be",
+      "doc_path": "data\\hackerrank\\screen\\frequently-asked-questions\\2426927743-how-to-rename-a-test.md",
+      "product_area": "screen",
+      "score": 0.016129,
+      "bm25_rank": 0,
+      "dense_rank": 2
+    },
+    {
+      "chunk_id": "3578c3de87e3",
+      "doc_path": "data\\hackerrank\\integrations\\single-sign-on-sso\\4264962721-getting-started-with-single-sign-on.md",
+      "product_area": "integrations",
+      "score": 0.015873,
+      "bm25_rank": 3,
+      "dense_rank": 0
+    },
+    {
+      "chunk_id": "3b6df3c60425",
+      "doc_path": "data\\hackerrank\\skillup\\getting-started\\8522032191-skillup-employee-platform.md",
+      "product_area": "skillup",
+      "score": 0.015873,
+      "bm25_rank": 0,
+      "dense_rank": 3
+    },
+    {
+      "chunk_id": "c42e07cc6592",
+      "doc_path": "data\\hackerrank\\integrations\\applicant-tracking-systems\\oracle-recruiting-cloud\\3350882088-oracle-recruiting-cloud-and-hackerrank-integration-user-guide.md",
+      "product_area": "integrations",
+      "score": 0.015625,
+      "bm25_rank": 4,
+      "dense_rank": 0
+    },
+    {
+      "chunk_id": "173fb6341136",
+      "doc_path": "data\\hackerrank\\settings\\company-level-admin-settings\\1019487408-changing-the-company-name.md",
+      "product_area": "settings",
+      "score": 0.015625,
+      "bm25_rank": 0,
+      "dense_rank": 4
+    }
+  ],
+  "grounded": {
+    "response": "Yes, you can update the name on your HackerRank certificate, but only once per account. This change will apply to all your certificates.\n\nTo update your name:\n1. Go to your certificate page.\n2. In the **Full Name** field, enter your desired name.\n3. Click **Regenerate Certificate**.\n4. Confirm the update by clicking **Update Name** in the dialog box.",
+    "cited_chunk_ids": [
+      "c3dea32b17af"
+    ],
+    "product_area": "community",
+    "confidence": "high",
+    "insufficient_corpus": false,
+    "can_act_unilaterally": true,
+    "reasoning": "The corpus directly answers the question about updating a certificate name and provides the exact steps."
+  },
+  "final": {
+    "status": "replied",
+    "product_area": "community",
+    "response": "Yes, you can update the name on your HackerRank certificate, but only once per account. This change will apply to all your certificates.\n\nTo update your name:\n1. Go to your certificate page.\n2. In the **Full Name** field, enter your desired name.\n3. Click **Regenerate Certificate**.\n4. Confirm the update by clicking **Update Name** in the dialog box.",
+    "justification": "Grounded reply from 1 chunk(s) at confidence=high. The corpus directly answers the question about updating a certificate name and provides the exact steps.",
+    "request_type": "product_issue"
+  },
+  "timings_ms": {
+    "triage_ms": 6671.3,
+    "retrieve_ms": 32.9,
+    "ground_ms": 8260.9,
+    "gate_ms": 0.0,
+    "total_ms": 14965.2
+  }
+}

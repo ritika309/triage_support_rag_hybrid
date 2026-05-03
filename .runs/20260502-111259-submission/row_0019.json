@@ -1,0 +1,112 @@
+{
+  "row_index": 19,
+  "input": {
+    "issue": "How do I dispute a charge",
+    "subject": "Dispute charge",
+    "company": "Visa"
+  },
+  "triage": {
+    "detected_company": "Visa",
+    "sub_requests": [
+      "how to dispute a charge"
+    ],
+    "scope": "in_scope",
+    "risk": "high",
+    "request_type_hint": "product_issue",
+    "product_area_hint": "dispute_resolution",
+    "asks_unilateral_action": false,
+    "short_circuit": "none",
+    "reasoning": "User is asking for information on how to dispute a charge, which is a common and documented process for Visa."
+  },
+  "retrieval": [
+    {
+      "chunk_id": "b568aaed469a",
+      "doc_path": "data\\visa\\support\\small-business\\dispute-resolution.md",
+      "product_area": "small_business",
+      "score": 0.032522,
+      "bm25_rank": 1,
+      "dense_rank": 2
+    },
+    {
+      "chunk_id": "303fdf399155",
+      "doc_path": "data\\visa\\support\\small-business\\dispute-resolution.md",
+      "product_area": "small_business",
+      "score": 0.032266,
+      "bm25_rank": 3,
+      "dense_rank": 1
+    },
+    {
+      "chunk_id": "f2afaffa38ab",
+      "doc_path": "data\\visa\\support.md",
+      "product_area": "general_support",
+      "score": 0.032002,
+      "bm25_rank": 2,
+      "dense_rank": 3
+    },
+    {
+      "chunk_id": "ab92d7b3fc41",
+      "doc_path": "data\\visa\\support\\small-business\\fraud-protection.md",
+      "product_area": "small_business",
+      "score": 0.030331,
+      "bm25_rank": 8,
+      "dense_rank": 4
+    },
+    {
+      "chunk_id": "2387108b9b20",
+      "doc_path": "data\\visa\\support.md",
+      "product_area": "general_support",
+      "score": 0.029469,
+      "bm25_rank": 5,
+      "dense_rank": 11
+    },
+    {
+      "chunk_id": "0c904053538d",
+      "doc_path": "data\\visa\\support\\consumer\\travelers-cheques.md",
+      "product_area": "travel_support",
+      "score": 0.029437,
+      "bm25_rank": 6,
+      "dense_rank": 10
+    },
+    {
+      "chunk_id": "1b9af702f54c",
+      "doc_path": "data\\visa\\support\\small-business\\regulations-fees.md",
+      "product_area": "small_business",
+      "score": 0.029437,
+      "bm25_rank": 10,
+      "dense_rank": 6
+    },
+    {
+      "chunk_id": "e8292dc2e1bd",
+      "doc_path": "data\\visa\\support\\small-business\\travelers-cheques.md",
+      "product_area": "travel_support",
+      "score": 0.029199,
+      "bm25_rank": 9,
+      "dense_rank": 8
+    }
+  ],
+  "grounded": {
+    "response": "To dispute a charge, please contact your bank or card issuer. The freephone number for your issuer can be found on the front or back of your Visa card. Your issuer will likely require detailed information about the transaction to resolve the dispute.",
+    "cited_chunk_ids": [
+      "f2afaffa38ab"
+    ],
+    "product_area": "general_support",
+    "confidence": "high",
+    "insufficient_corpus": false,
+    "can_act_unilaterally": true,
+    "reasoning": "The corpus directly answers how to dispute a charge by directing the user to contact their issuer."
+  },
+  "final": {
+    "status": "replied",
+    "product_area": "general_support",
+    "response": "To dispute a charge, please contact your bank or card issuer. The freephone number for your issuer can be found on the front or back of your Visa card. Your issuer will likely require detailed information about the transaction to resolve the dispute.",
+    "justification": "Grounded reply from 1 chunk(s) at confidence=high. The corpus directly answers how to dispute a charge by directing the user to contact their issuer.",
+    "request_type": "product_issue"
+  },
+  "timings_ms": {
+    "triage_ms": 6405.2,
+    "retrieve_ms": 24.6,
+    "ground_ms": 8501.2,
+    "gate_ms": 0.0,
+    "total_ms": 14931.1
+  }
+}

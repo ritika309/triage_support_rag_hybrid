@@ -1,0 +1,113 @@
+{
+  "row_index": 5,
+  "input": {
+    "issue": "i signed up using google login on hackerrank community , so i do not have a separate hackerrank password. please delete my account",
+    "subject": "",
+    "company": "HackerRank"
+  },
+  "triage": {
+    "detected_company": "HackerRank",
+    "sub_requests": [
+      "delete my account"
+    ],
+    "scope": "in_scope",
+    "risk": "med",
+    "request_type_hint": "product_issue",
+    "product_area_hint": "account_settings",
+    "asks_unilateral_action": false,
+    "short_circuit": "none",
+    "reasoning": "Account deletion is a documented self-service action; the agent surfaces the procedure for the user to follow."
+  },
+  "retrieval": [
+    {
+      "chunk_id": "4cc36f1928c5",
+      "doc_path": "data\\hackerrank\\hackerrank_community\\account-settings\\manage-account\\1917106962-manage-account-faqs.md",
+      "product_area": "community",
+      "score": 0.032522,
+      "bm25_rank": 1,
+      "dense_rank": 2
+    },
+    {
+      "chunk_id": "3a77325a8cea",
+      "doc_path": "data\\hackerrank\\hackerrank_community\\account-settings\\manage-account\\5618101592-delete-an-account.md",
+      "product_area": "community",
+      "score": 0.032522,
+      "bm25_rank": 2,
+      "dense_rank": 1
+    },
+    {
+      "chunk_id": "08b431d523e2",
+      "doc_path": "data\\hackerrank\\hackerrank_community\\additional-resources\\4147773232-troubleshooting-login-issues.md",
+      "product_area": "community",
+      "score": 0.031258,
+      "bm25_rank": 3,
+      "dense_rank": 5
+    },
+    {
+      "chunk_id": "e2209dd6b90f",
+      "doc_path": "data\\hackerrank\\hackerrank_community\\account-settings\\manage-account\\9533293667-create-an-account.md",
+      "product_area": "community",
+      "score": 0.030777,
+      "bm25_rank": 6,
+      "dense_rank": 4
+    },
+    {
+      "chunk_id": "87140d6acb94",
+      "doc_path": "data\\hackerrank\\integrations\\single-sign-on-sso\\9826965692-log-in-to-hackerrank-with-google-workspace-account.md",
+      "product_area": "integrations",
+      "score": 0.029958,
+      "bm25_rank": 11,
+      "dense_rank": 3
+    },
+    {
+      "chunk_id": "d9f5d21b4e9d",
+      "doc_path": "data\\hackerrank\\hackerrank_community\\account-settings\\manage-account\\2403570133-update-or-reset-password.md",
+      "product_area": "community",
+      "score": 0.029911,
+      "bm25_rank": 4,
+      "dense_rank": 10
+    },
+    {
+      "chunk_id": "cebf1225b4e4",
+      "doc_path": "data\\hackerrank\\settings\\user-account-settings-and-preferences\\7046498277-update-or-reset-password.md",
+      "product_area": "settings",
+      "score": 0.026857,
+      "bm25_rank": 13,
+      "dense_rank": 16
+    },
+    {
+      "chunk_id": "f89b759a2d84",
+      "doc_path": "data\\hackerrank\\integrations\\single-sign-on-sso\\9826965692-log-in-to-hackerrank-with-google-workspace-account.md",
+      "product_area": "integrations",
+      "score": 0.015385,
+      "bm25_rank": 5,
+      "dense_rank": 0
+    }
+  ],
+  "grounded": {
+    "response": "To delete your HackerRank Community account, you must first set a password since you signed up using Google login. \n\n1. Go to the HackerRank Community login page and click **Forgot Password?**\n2. Enter the email address associated with your Google account and follow the password reset steps.\n3. Once you have a password, log in to your account.\n4. Click the profile icon in the top-right corner and select **Settings**.\n5. Scroll to the **Delete Accounts** section and click **Delete Account**.\n6. Select a reason for deleting your account and confirm.",
+    "cited_chunk_ids": [
+      "4cc36f1928c5",
+      "3a77325a8cea"
+    ],
+    "product_area": "community",
+    "confidence": "high",
+    "insufficient_corpus": false,
+    "can_act_unilaterally": false,
+    "reasoning": "The user needs to set a password before deleting the account, and the chunks provide the necessary steps for both setting a password and deleting an account."
+  },
+  "final": {
+    "status": "escalated",
+    "product_area": "community",
+    "response": "Escalate to a human",
+    "justification": "Grounded responder determined the request requires unauthorized unilateral action. The user needs to set a password before deleting the account, and the chunks provide the necessary steps for both setting a password and deleting an account.",
+    "request_type": "product_issue"
+  },
+  "timings_ms": {
+    "triage_ms": 15869.7,
+    "retrieve_ms": 35.0,
+    "ground_ms": 39886.6,
+    "gate_ms": 0.0,
+    "total_ms": 55791.3
+  }
+}

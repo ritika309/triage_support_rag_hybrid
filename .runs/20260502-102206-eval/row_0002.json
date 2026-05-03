@@ -1,0 +1,110 @@
+{
+  "row_index": 2,
+  "input": {
+    "issue": "site is down & none of the pages are accessible",
+    "subject": "",
+    "company": null
+  },
+  "triage": {
+    "detected_company": "None",
+    "sub_requests": [
+      "report site outage"
+    ],
+    "scope": "in_scope",
+    "risk": "high",
+    "request_type_hint": "bug",
+    "product_area_hint": "outage",
+    "asks_unilateral_action": false,
+    "short_circuit": "none",
+    "reasoning": "Outage report; no documented self-service answer applies, retrieval will likely return nothing useful and the gate will escalate."
+  },
+  "retrieval": [
+    {
+      "chunk_id": "b4dc5fc89d79",
+      "doc_path": "data\\claude\\claude-in-chrome\\12902405-claude-in-chrome-troubleshooting.md",
+      "product_area": "claude_in_chrome",
+      "score": 0.030366,
+      "bm25_rank": 9,
+      "dense_rank": 3
+    },
+    {
+      "chunk_id": "4636851cb507",
+      "doc_path": "data\\hackerrank\\library\\manage-question\\4968606472-steps-to-create-accessible-content-at-hackerrank.md",
+      "product_area": "library",
+      "score": 0.030018,
+      "bm25_rank": 2,
+      "dense_rank": 12
+    },
+    {
+      "chunk_id": "e1f8ed3ad697",
+      "doc_path": "data\\claude\\claude-in-chrome\\12902428-using-claude-in-chrome-safely.md",
+      "product_area": "claude_in_chrome",
+      "score": 0.016393,
+      "bm25_rank": 1,
+      "dense_rank": 0
+    },
+    {
+      "chunk_id": "13370bcceb61",
+      "doc_path": "data\\claude\\team-and-enterprise-plans\\capabilities\\12489464-use-enterprise-search.md",
+      "product_area": "team_and_enterprise_plans",
+      "score": 0.016393,
+      "bm25_rank": 0,
+      "dense_rank": 1
+    },
+    {
+      "chunk_id": "7bbdc1460a6f",
+      "doc_path": "data\\hackerrank\\library\\manage-question\\4968606472-steps-to-create-accessible-content-at-hackerrank.md",
+      "product_area": "library",
+      "score": 0.016129,
+      "bm25_rank": 0,
+      "dense_rank": 2
+    },
+    {
+      "chunk_id": "21339dfe9f40",
+      "doc_path": "data\\claude\\privacy-and-legal\\12335811-report-a-concern-australian-dis-standard-compliance.md",
+      "product_area": "privacy",
+      "score": 0.015873,
+      "bm25_rank": 3,
+      "dense_rank": 0
+    },
+    {
+      "chunk_id": "ace12b5b6606",
+      "doc_path": "data\\hackerrank\\library\\manage-question\\4968606472-steps-to-create-accessible-content-at-hackerrank.md",
+      "product_area": "library",
+      "score": 0.015625,
+      "bm25_rank": 4,
+      "dense_rank": 0
+    },
+    {
+      "chunk_id": "3729f06df4eb",
+      "doc_path": "data\\visa\\support\\merchant.md",
+      "product_area": "merchant",
+      "score": 0.015625,
+      "bm25_rank": 0,
+      "dense_rank": 4
+    }
+  ],
+  "grounded": {
+    "response": "I'll need to escalate this to a human support specialist who can check the platform's current status and help you directly.",
+    "cited_chunk_ids": [],
+    "product_area": "uncategorized",
+    "confidence": "low",
+    "insufficient_corpus": true,
+    "can_act_unilaterally": true,
+    "reasoning": "Outage report; corpus has no self-service answer for current platform availability."
+  },
+  "final": {
+    "status": "escalated",
+    "product_area": "uncategorized",
+    "response": "Escalate to a human",
+    "justification": "No grounded answer in the corpus for this ticket. Outage report; corpus has no self-service answer for current platform availability.",
+    "request_type": "bug"
+  },
+  "timings_ms": {
+    "triage_ms": 2653.2,
+    "retrieve_ms": 27.3,
+    "ground_ms": 38946.0,
+    "gate_ms": 0.0,
+    "total_ms": 41626.5
+  }
+}

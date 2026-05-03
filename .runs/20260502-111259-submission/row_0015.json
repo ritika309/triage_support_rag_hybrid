@@ -1,0 +1,110 @@
+{
+  "row_index": 15,
+  "input": {
+    "issue": "Claude has stopped working completely, all requests are failing",
+    "subject": "Claude not responding",
+    "company": "Claude"
+  },
+  "triage": {
+    "detected_company": "Claude",
+    "sub_requests": [
+      "report Claude outage"
+    ],
+    "scope": "in_scope",
+    "risk": "high",
+    "request_type_hint": "bug",
+    "product_area_hint": "outage",
+    "asks_unilateral_action": false,
+    "short_circuit": "none",
+    "reasoning": "The user is reporting a complete outage of Claude services, which is a high-risk bug that requires investigation."
+  },
+  "retrieval": [
+    {
+      "chunk_id": "13370bcceb61",
+      "doc_path": "data\\claude\\team-and-enterprise-plans\\capabilities\\12489464-use-enterprise-search.md",
+      "product_area": "team_and_enterprise_plans",
+      "score": 0.027973,
+      "bm25_rank": 11,
+      "dense_rank": 12
+    },
+    {
+      "chunk_id": "b390ed660414",
+      "doc_path": "data\\claude\\claude-code\\launch-guides\\14555399-claude-code-champion-kit.md",
+      "product_area": "claude_code",
+      "score": 0.016393,
+      "bm25_rank": 1,
+      "dense_rank": 0
+    },
+    {
+      "chunk_id": "75c9fb04cbfb",
+      "doc_path": "data\\claude\\connectors\\pre-built-connectors\\12461605-using-claude-in-slack.md",
+      "product_area": "connectors",
+      "score": 0.016393,
+      "bm25_rank": 0,
+      "dense_rank": 1
+    },
+    {
+      "chunk_id": "8341647ab484",
+      "doc_path": "data\\claude\\claude-code\\launch-guides\\14553517-claude-code-common-developer-use-cases.md",
+      "product_area": "claude_code",
+      "score": 0.016129,
+      "bm25_rank": 2,
+      "dense_rank": 0
+    },
+    {
+      "chunk_id": "b4dc5fc89d79",
+      "doc_path": "data\\claude\\claude-in-chrome\\12902405-claude-in-chrome-troubleshooting.md",
+      "product_area": "claude_in_chrome",
+      "score": 0.016129,
+      "bm25_rank": 0,
+      "dense_rank": 2
+    },
+    {
+      "chunk_id": "181fca79557a",
+      "doc_path": "data\\claude\\team-and-enterprise-plans\\admin-management\\12005970-manage-extra-usage-for-team-and-seat-based-enterprise-plans.md",
+      "product_area": "team_and_enterprise_plans",
+      "score": 0.015873,
+      "bm25_rank": 3,
+      "dense_rank": 0
+    },
+    {
+      "chunk_id": "db640ddbbad5",
+      "doc_path": "data\\claude\\claude-api-and-console\\troubleshooting\\10366432-i-m-getting-an-api-connection-error-how-can-i-fix-it.md",
+      "product_area": "claude_api_and_console",
+      "score": 0.015873,
+      "bm25_rank": 0,
+      "dense_rank": 3
+    },
+    {
+      "chunk_id": "d976b8b7f7fa",
+      "doc_path": "data\\claude\\claude-api-and-console\\claude-api-usage-and-best-practices\\8241216-violating-anthropic-s-usage-policy.md",
+      "product_area": "claude_api_and_console",
+      "score": 0.015625,
+      "bm25_rank": 4,
+      "dense_rank": 0
+    }
+  ],
+  "grounded": {
+    "response": "I'll need to escalate this to a human support specialist for review. It sounds like there might be a broader service issue.",
+    "cited_chunk_ids": [],
+    "product_area": "claude",
+    "confidence": "low",
+    "insufficient_corpus": true,
+    "can_act_unilaterally": true,
+    "reasoning": "The user is reporting a complete outage of Claude, and none of the provided chunks offer specific troubleshooting steps or information about reporting a general Claude outage."
+  },
+  "final": {
+    "status": "escalated",
+    "product_area": "claude",
+    "response": "Escalate to a human",
+    "justification": "No grounded answer in the corpus for this ticket. The user is reporting a complete outage of Claude, and none of the provided chunks offer specific troubleshooting steps or information about reporting a general Claude outage.",
+    "request_type": "bug"
+  },
+  "timings_ms": {
+    "triage_ms": 2544.2,
+    "retrieve_ms": 56.6,
+    "ground_ms": 8448.7,
+    "gate_ms": 0.1,
+    "total_ms": 11049.6
+  }
+}

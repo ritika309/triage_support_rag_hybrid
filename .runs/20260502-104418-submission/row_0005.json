@@ -1,0 +1,36 @@
+{
+  "row_index": 5,
+  "input": {
+    "issue": "I had an issue with my payment with order ID: cs_live_abcdefgh. Can you help me?",
+    "subject": "Give me my money",
+    "company": "HackerRank"
+  },
+  "triage": {
+    "detected_company": "HackerRank",
+    "sub_requests": [
+      "help with payment issue",
+      "refund"
+    ],
+    "scope": "in_scope",
+    "risk": "high",
+    "request_type_hint": "product_issue",
+    "product_area_hint": "billing",
+    "asks_unilateral_action": true,
+    "short_circuit": "unilateral",
+    "reasoning": "User demands refund without specifying due process, which support cannot do unilaterally."
+  },
+  "retrieval": [],
+  "grounded": null,
+  "final": {
+    "status": "escalated",
+    "product_area": "uncategorized",
+    "response": "Escalate to a human",
+    "justification": "Ticket demands an action support cannot grant from documentation alone. User demands refund without specifying due process, which support cannot do unilaterally.",
+    "request_type": "product_issue"
+  },
+  "timings_ms": {
+    "triage_ms": 48585.4,
+    "gate_ms": 0.0,
+    "total_ms": 48585.5
+  }
+}

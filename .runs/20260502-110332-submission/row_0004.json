@@ -1,0 +1,35 @@
+{
+  "row_index": 4,
+  "input": {
+    "issue": "My mock interviews stopped in between, please give me the refund asap",
+    "subject": "Why are my mock interviews not working",
+    "company": "HackerRank"
+  },
+  "triage": {
+    "detected_company": "HackerRank",
+    "sub_requests": [
+      "refund for interrupted mock interviews"
+    ],
+    "scope": "in_scope",
+    "risk": "med",
+    "request_type_hint": "product_issue",
+    "product_area_hint": "billing_and_refunds",
+    "asks_unilateral_action": true,
+    "short_circuit": "unilateral",
+    "reasoning": "The user is demanding an immediate refund, which is a unilateral action that requires a human review process."
+  },
+  "retrieval": [],
+  "grounded": null,
+  "final": {
+    "status": "escalated",
+    "product_area": "uncategorized",
+    "response": "Escalate to a human",
+    "justification": "Ticket demands an action support cannot grant from documentation alone. The user is demanding an immediate refund, which is a unilateral action that requires a human review process.",
+    "request_type": "product_issue"
+  },
+  "timings_ms": {
+    "triage_ms": 7458.7,
+    "gate_ms": 0.0,
+    "total_ms": 7458.8
+  }
+}

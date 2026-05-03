@@ -1,0 +1,112 @@
+{
+  "row_index": 13,
+  "input": {
+    "issue": "Hello! I am trying to remove an interviewer from the platform. I am not seeing this as an option when I select the three dots next to their name. \nCan you let me know how to do this?",
+    "subject": "How to Remove a User",
+    "company": "HackerRank"
+  },
+  "triage": {
+    "detected_company": "HackerRank",
+    "sub_requests": [
+      "remove an interviewer from the platform"
+    ],
+    "scope": "in_scope",
+    "risk": "med",
+    "request_type_hint": "product_issue",
+    "product_area_hint": "user_management",
+    "asks_unilateral_action": false,
+    "short_circuit": "none",
+    "reasoning": "User is asking for instructions on how to perform a user management task within HackerRank, which is a documented self-service action."
+  },
+  "retrieval": [
+    {
+      "chunk_id": "aed97e081ec7",
+      "doc_path": "data\\hackerrank\\integrations\\scheduling\\1262999130-hackerrank-interview-and-google-calendar-integration.md",
+      "product_area": "integrations",
+      "score": 0.016393,
+      "bm25_rank": 1,
+      "dense_rank": 0
+    },
+    {
+      "chunk_id": "085f851b1b26",
+      "doc_path": "data\\hackerrank\\interviews\\manage-interviews\\5520105382-deleting-interview-questions.md",
+      "product_area": "interviews",
+      "score": 0.016393,
+      "bm25_rank": 0,
+      "dense_rank": 1
+    },
+    {
+      "chunk_id": "90434d876359",
+      "doc_path": "data\\hackerrank\\integrations\\scheduling\\2480863637-hackerrank-interview-and-outlook-calendar-integration.md",
+      "product_area": "integrations",
+      "score": 0.016129,
+      "bm25_rank": 2,
+      "dense_rank": 0
+    },
+    {
+      "chunk_id": "2ab502c52dfa",
+      "doc_path": "data\\hackerrank\\interviews\\manage-interviews\\6488043690-canceling-an-interview.md",
+      "product_area": "interviews",
+      "score": 0.016129,
+      "bm25_rank": 0,
+      "dense_rank": 2
+    },
+    {
+      "chunk_id": "00af38c593b1",
+      "doc_path": "data\\hackerrank\\integrations\\applicant-tracking-systems\\greenhouse\\3678461564-greenhouse-hackerrank-integration-faqs.md",
+      "product_area": "integrations",
+      "score": 0.015873,
+      "bm25_rank": 3,
+      "dense_rank": 0
+    },
+    {
+      "chunk_id": "58ed7092b26d",
+      "doc_path": "data\\hackerrank\\interviews\\manage-interviews\\1242592015-ending-an-interview.md",
+      "product_area": "interviews",
+      "score": 0.015873,
+      "bm25_rank": 0,
+      "dense_rank": 3
+    },
+    {
+      "chunk_id": "9a2ce2bb57d9",
+      "doc_path": "data\\hackerrank\\integrations\\scheduling\\7401637722-interviewplanner-hackerrank-integration-faqs-.md",
+      "product_area": "integrations",
+      "score": 0.015625,
+      "bm25_rank": 4,
+      "dense_rank": 0
+    },
+    {
+      "chunk_id": "cfb09a0778dc",
+      "doc_path": "data\\hackerrank\\settings\\teams-management\\2203617737-manage-team-members.md",
+      "product_area": "settings",
+      "score": 0.015625,
+      "bm25_rank": 0,
+      "dense_rank": 4
+    }
+  ],
+  "grounded": {
+    "response": "To remove a team member, including an interviewer, from your HackerRank account:\n\n1. Log in to your HackerRank for Work account.\n2. Navigate to the team members list.\n3. Locate the user you wish to remove.\n4. Select the delete icon in the Action column next to their name.",
+    "cited_chunk_ids": [
+      "cfb09a0778dc"
+    ],
+    "product_area": "settings",
+    "confidence": "high",
+    "insufficient_corpus": false,
+    "can_act_unilaterally": true,
+    "reasoning": "The user is asking how to remove a user (interviewer) from the platform, and chunk cfb09a0778dc provides clear steps for removing a team member, which applies to interviewers."
+  },
+  "final": {
+    "status": "replied",
+    "product_area": "settings",
+    "response": "To remove a team member, including an interviewer, from your HackerRank account:\n\n1. Log in to your HackerRank for Work account.\n2. Navigate to the team members list.\n3. Locate the user you wish to remove.\n4. Select the delete icon in the Action column next to their name.",
+    "justification": "Grounded reply from 1 chunk(s) at confidence=high. The user is asking how to remove a user (interviewer) from the platform, and chunk cfb09a0778dc provides clear steps for removing a team member, which applies to interviewers.",
+    "request_type": "product_issue"
+  },
+  "timings_ms": {
+    "triage_ms": 7536.2,
+    "retrieve_ms": 130.0,
+    "ground_ms": 8259.0,
+    "gate_ms": 0.0,
+    "total_ms": 15925.3
+  }
+}

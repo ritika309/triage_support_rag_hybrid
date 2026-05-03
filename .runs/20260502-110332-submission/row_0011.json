@@ -1,0 +1,115 @@
+{
+  "row_index": 11,
+  "input": {
+    "issue": "Can you please confirm the inactivity times currently set (and are they different for candidate/interviewer)? \nInterviewers have reported that they often ask candidates to screen share and then after 20 mins or so, the candidate is sent back to the HR lobby.\n\nThe assumption is that perhaps HR thinks the interviewers left since they are mostly watching the screen share and not active on their HR screen? \nIf that is the case, can we extend inactivity times so interviewers and candidates have a bit more time to partner together \nwithout being kicked out of the room?",
+    "subject": "Candidate inactivity help",
+    "company": "HackerRank"
+  },
+  "triage": {
+    "detected_company": "HackerRank",
+    "sub_requests": [
+      "confirm inactivity times for candidates and interviewers",
+      "extend inactivity times"
+    ],
+    "scope": "in_scope",
+    "risk": "low",
+    "request_type_hint": "product_issue",
+    "product_area_hint": "test_settings",
+    "asks_unilateral_action": false,
+    "short_circuit": "none",
+    "reasoning": "The user is asking for information about inactivity settings and requesting a change to those settings, which is a standard product inquiry."
+  },
+  "retrieval": [
+    {
+      "chunk_id": "eccb1798d51c",
+      "doc_path": "data\\hackerrank\\interviews\\interview-settings\\1151935613-using-virtual-lobby-in-hackerrank-interviews.md",
+      "product_area": "interviews",
+      "score": 0.03031,
+      "bm25_rank": 7,
+      "dense_rank": 5
+    },
+    {
+      "chunk_id": "24dc476b8efc",
+      "doc_path": "data\\hackerrank\\screen\\best-practice-guides\\5269412517-mitigating-candidate-drop-off.md",
+      "product_area": "screen",
+      "score": 0.029236,
+      "bm25_rank": 11,
+      "dense_rank": 6
+    },
+    {
+      "chunk_id": "a232d3ba8d15",
+      "doc_path": "data\\hackerrank\\screen\\frequently-asked-questions\\8754663182-what-is-the-maximum-number-of-candidates-i-can-assess-using-coding-assessments%3F.md",
+      "product_area": "screen",
+      "score": 0.02895,
+      "bm25_rank": 18,
+      "dense_rank": 2
+    },
+    {
+      "chunk_id": "82b9f707dd1b",
+      "doc_path": "data\\hackerrank\\general-help\\evaluation-guides\\1216495690-early-talent-.md",
+      "product_area": "general_help",
+      "score": 0.016393,
+      "bm25_rank": 1,
+      "dense_rank": 0
+    },
+    {
+      "chunk_id": "7491f2c89e47",
+      "doc_path": "data\\hackerrank\\interviews\\interview-settings\\1151935613-using-virtual-lobby-in-hackerrank-interviews.md",
+      "product_area": "interviews",
+      "score": 0.016393,
+      "bm25_rank": 0,
+      "dense_rank": 1
+    },
+    {
+      "chunk_id": "4e5b07259de0",
+      "doc_path": "data\\hackerrank\\interviews\\additional-resources\\5533854049-hackerrank-interview-best-practices.md",
+      "product_area": "interviews",
+      "score": 0.016129,
+      "bm25_rank": 2,
+      "dense_rank": 0
+    },
+    {
+      "chunk_id": "dca6c27d3854",
+      "doc_path": "data\\hackerrank\\general-help\\evaluation-guides\\2625349560-professional-hire.md",
+      "product_area": "general_help",
+      "score": 0.015873,
+      "bm25_rank": 3,
+      "dense_rank": 0
+    },
+    {
+      "chunk_id": "32056780aa24",
+      "doc_path": "data\\hackerrank\\interviews\\manage-interviews\\8404005945-creating-an-interview.md",
+      "product_area": "interviews",
+      "score": 0.015873,
+      "bm25_rank": 0,
+      "dense_rank": 3
+    }
+  ],
+  "grounded": {
+    "response": "I cannot confirm the specific inactivity times for candidates and interviewers, nor can I extend them. The provided documentation does not detail these specific time limits or how to adjust them.\n\nHowever, HackerRank Interviews does feature a Virtual Lobby, which acts as a waiting room for interviewers and candidates. This feature can help manage participants entering or leaving an interview without disrupting ongoing sessions. You can find more information on using the Virtual Lobby in HackerRank Interviews.",
+    "cited_chunk_ids": [
+      "eccb1798d51c",
+      "7491f2c89e47",
+      "4e5b07259de0"
+    ],
+    "product_area": "interviews",
+    "confidence": "med",
+    "insufficient_corpus": false,
+    "can_act_unilaterally": true,
+    "reasoning": "The corpus mentions the Virtual Lobby feature which can help manage participant flow, but does not provide specific inactivity timers or how to adjust them, leading to a partial answer."
+  },
+  "final": {
+    "status": "replied",
+    "product_area": "interviews",
+    "response": "I cannot confirm the specific inactivity times for candidates and interviewers, nor can I extend them. The provided documentation does not detail these specific time limits or how to adjust them.\n\nHowever, HackerRank Interviews does feature a Virtual Lobby, which acts as a waiting room for interviewers and candidates. This feature can help manage participants entering or leaving an interview without disrupting ongoing sessions. You can find more information on using the Virtual Lobby in HackerRank Interviews.",
+    "justification": "Grounded reply from 3 chunk(s) at confidence=med. The corpus mentions the Virtual Lobby feature which can help manage participant flow, but does not provide specific inactivity timers or how to adjust them, leading to a partial answer.",
+    "request_type": "product_issue"
+  },
+  "timings_ms": {
+    "triage_ms": 6442.1,
+    "retrieve_ms": 177.7,
+    "ground_ms": 8676.7,
+    "gate_ms": 0.0,
+    "total_ms": 15296.5
+  }
+}

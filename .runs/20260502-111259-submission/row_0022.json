@@ -1,0 +1,114 @@
+{
+  "row_index": 22,
+  "input": {
+    "issue": "I need urgent cash but don't have any right now & only the VISA card",
+    "subject": "Urgent need for cash",
+    "company": "Visa"
+  },
+  "triage": {
+    "detected_company": "Visa",
+    "sub_requests": [
+      "need urgent cash with only Visa card"
+    ],
+    "scope": "in_scope",
+    "risk": "low",
+    "request_type_hint": "product_issue",
+    "product_area_hint": "travel_support",
+    "asks_unilateral_action": false,
+    "short_circuit": "none",
+    "reasoning": "User is asking for advice on how to get cash with a Visa card, which is a common travel support query."
+  },
+  "retrieval": [
+    {
+      "chunk_id": "f407d98b82d8",
+      "doc_path": "data\\visa\\support\\consumer\\travel-support.md",
+      "product_area": "travel_support",
+      "score": 0.031778,
+      "bm25_rank": 1,
+      "dense_rank": 5
+    },
+    {
+      "chunk_id": "f2afaffa38ab",
+      "doc_path": "data\\visa\\support.md",
+      "product_area": "general_support",
+      "score": 0.031778,
+      "bm25_rank": 5,
+      "dense_rank": 1
+    },
+    {
+      "chunk_id": "0aa8d606c27b",
+      "doc_path": "data\\visa\\support\\consumer\\travel-support.md",
+      "product_area": "travel_support",
+      "score": 0.030835,
+      "bm25_rank": 2,
+      "dense_rank": 8
+    },
+    {
+      "chunk_id": "3101da88496d",
+      "doc_path": "data\\visa\\support\\small-business\\fraud-protection.md",
+      "product_area": "small_business",
+      "score": 0.030077,
+      "bm25_rank": 7,
+      "dense_rank": 6
+    },
+    {
+      "chunk_id": "fb97c32de9a6",
+      "doc_path": "data\\visa\\support\\small-business\\fraud-protection.md",
+      "product_area": "small_business",
+      "score": 0.029631,
+      "bm25_rank": 8,
+      "dense_rank": 7
+    },
+    {
+      "chunk_id": "0ae44eb3c9a4",
+      "doc_path": "data\\visa\\support\\consumer\\travelers-cheques.md",
+      "product_area": "travel_support",
+      "score": 0.029514,
+      "bm25_rank": 4,
+      "dense_rank": 12
+    },
+    {
+      "chunk_id": "0c904053538d",
+      "doc_path": "data\\visa\\support\\consumer\\travelers-cheques.md",
+      "product_area": "travel_support",
+      "score": 0.029287,
+      "bm25_rank": 16,
+      "dense_rank": 2
+    },
+    {
+      "chunk_id": "ab92d7b3fc41",
+      "doc_path": "data\\visa\\support\\small-business\\fraud-protection.md",
+      "product_area": "small_business",
+      "score": 0.029031,
+      "bm25_rank": 3,
+      "dense_rank": 16
+    }
+  ],
+  "grounded": {
+    "response": "While Visa cards are widely accepted for payments and cash withdrawals at ATMs worldwide, they are not a direct source of immediate cash if you do not have any funds available. \n\nTo get cash, you can use your Visa card at ATMs that display the Visa PLUS logo. You can locate these ATMs using Visa's [ATM locator](https://www.visa.com/atmlocator/).\n\nIf you are experiencing financial hardship or need immediate funds, please contact your card issuer or bank. They can provide guidance on your account and potential options.",
+    "cited_chunk_ids": [
+      "f407d98b82d8",
+      "0aa8d606c27b",
+      "f2afaffa38ab"
+    ],
+    "product_area": "travel_support",
+    "confidence": "med",
+    "insufficient_corpus": false,
+    "can_act_unilaterally": true,
+    "reasoning": "The corpus explains how to withdraw cash using a Visa card at ATMs and advises contacting the card issuer for further assistance, which addresses the user's need for cash, though not as an immediate loan."
+  },
+  "final": {
+    "status": "replied",
+    "product_area": "travel_support",
+    "response": "While Visa cards are widely accepted for payments and cash withdrawals at ATMs worldwide, they are not a direct source of immediate cash if you do not have any funds available. \n\nTo get cash, you can use your Visa card at ATMs that display the Visa PLUS logo. You can locate these ATMs using Visa's [ATM locator](https://www.visa.com/atmlocator/).\n\nIf you are experiencing financial hardship or need immediate funds, please contact your card issuer or bank. They can provide guidance on your account and potential options.",
+    "justification": "Grounded reply from 3 chunk(s) at confidence=med. The corpus explains how to withdraw cash using a Visa card at ATMs and advises contacting the card issuer for further assistance, which addresses the user's need for cash, though not as an immediate loan.",
+    "request_type": "product_issue"
+  },
+  "timings_ms": {
+    "triage_ms": 6705.2,
+    "retrieve_ms": 31.4,
+    "ground_ms": 8658.6,
+    "gate_ms": 0.1,
+    "total_ms": 15395.3
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "row_index": 5,
+  "input": {
+    "issue": "I had an issue with my payment with order ID: cs_live_abcdefgh. Can you help me?",
+    "subject": "Give me my money",
+    "company": "HackerRank"
+  },
+  "triage": {
+    "detected_company": "HackerRank",
+    "sub_requests": [
+      "refund for order cs_live_abcdefgh"
+    ],
+    "scope": "in_scope",
+    "risk": "high",
+    "request_type_hint": "product_issue",
+    "product_area_hint": "billing",
+    "asks_unilateral_action": true,
+    "short_circuit": "unilateral",
+    "reasoning": "User is demanding a refund for a specific order, which requires human intervention and cannot be resolved by surfacing documentation alone."
+  },
+  "retrieval": [],
+  "grounded": null,
+  "final": {
+    "status": "escalated",
+    "product_area": "uncategorized",
+    "response": "Escalate to a human",
+    "justification": "Ticket demands an action support cannot grant from documentation alone. User is demanding a refund for a specific order, which requires human intervention and cannot be resolved by surfacing documentation alone.",
+    "request_type": "product_issue"
+  },
+  "timings_ms": {
+    "triage_ms": 6119.5,
+    "gate_ms": 0.0,
+    "total_ms": 6119.5
+  }
+}

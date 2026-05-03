@@ -1,0 +1,35 @@
+{
+  "row_index": 5,
+  "input": {
+    "issue": "i signed up using google login on hackerrank community , so i do not have a separate hackerrank password. please delete my account",
+    "subject": "",
+    "company": "HackerRank"
+  },
+  "triage": {
+    "detected_company": "HackerRank",
+    "sub_requests": [
+      "delete account"
+    ],
+    "scope": "in_scope",
+    "risk": "med",
+    "request_type_hint": "product_issue",
+    "product_area_hint": "account_management",
+    "asks_unilateral_action": true,
+    "short_circuit": "unilateral",
+    "reasoning": "User demands account deletion without going through standard account management procedures."
+  },
+  "retrieval": [],
+  "grounded": null,
+  "final": {
+    "status": "escalated",
+    "product_area": "account_management",
+    "response": "Escalate to a human",
+    "justification": "Ticket demands an action support cannot grant from documentation alone. User demands account deletion without going through standard account management procedures.",
+    "request_type": "product_issue"
+  },
+  "timings_ms": {
+    "triage_ms": 14674.5,
+    "gate_ms": 0.0,
+    "total_ms": 14674.6
+  }
+}

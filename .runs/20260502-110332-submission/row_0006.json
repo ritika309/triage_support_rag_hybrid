@@ -1,0 +1,35 @@
+{
+  "row_index": 6,
+  "input": {
+    "issue": "I am planning to start using HackerRank for hiring, can you help us with the infosec \nprocess of my company by filling in the forms",
+    "subject": "Using HackerRank for hiring",
+    "company": "HackerRank"
+  },
+  "triage": {
+    "detected_company": "HackerRank",
+    "sub_requests": [
+      "fill in infosec forms for company hiring process"
+    ],
+    "scope": "in_scope",
+    "risk": "med",
+    "request_type_hint": "product_issue",
+    "product_area_hint": "compliance_and_security",
+    "asks_unilateral_action": true,
+    "short_circuit": "unilateral",
+    "reasoning": "The user is asking the platform to fill out their company's internal infosec forms, which is an action the platform cannot perform."
+  },
+  "retrieval": [],
+  "grounded": null,
+  "final": {
+    "status": "escalated",
+    "product_area": "uncategorized",
+    "response": "Escalate to a human",
+    "justification": "Ticket demands an action support cannot grant from documentation alone. The user is asking the platform to fill out their company's internal infosec forms, which is an action the platform cannot perform.",
+    "request_type": "product_issue"
+  },
+  "timings_ms": {
+    "triage_ms": 7802.8,
+    "gate_ms": 0.0,
+    "total_ms": 7802.8
+  }
+}

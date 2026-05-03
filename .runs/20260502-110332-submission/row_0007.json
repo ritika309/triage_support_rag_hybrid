@@ -1,0 +1,113 @@
+{
+  "row_index": 7,
+  "input": {
+    "issue": "i can not able to see apply tab",
+    "subject": "I need to practice, submissions not working",
+    "company": "HackerRank"
+  },
+  "triage": {
+    "detected_company": "HackerRank",
+    "sub_requests": [
+      "cannot see apply tab",
+      "submissions not working"
+    ],
+    "scope": "in_scope",
+    "risk": "low",
+    "request_type_hint": "product_issue",
+    "product_area_hint": "practice_and_submissions",
+    "asks_unilateral_action": false,
+    "short_circuit": "none",
+    "reasoning": "User is reporting an issue with the HackerRank platform related to practice and submissions, which requires retrieval for troubleshooting."
+  },
+  "retrieval": [
+    {
+      "chunk_id": "10a7e19d8f6e",
+      "doc_path": "data\\hackerrank\\skillup\\getting-started\\2960935422-get-started-with-certify.md",
+      "product_area": "skillup",
+      "score": 0.016393,
+      "bm25_rank": 1,
+      "dense_rank": 0
+    },
+    {
+      "chunk_id": "52a7e1c3d7e9",
+      "doc_path": "data\\hackerrank\\screen\\managing-tests\\6967597139-creating-a-new-test.md",
+      "product_area": "screen",
+      "score": 0.016393,
+      "bm25_rank": 0,
+      "dense_rank": 1
+    },
+    {
+      "chunk_id": "aed97e081ec7",
+      "doc_path": "data\\hackerrank\\integrations\\scheduling\\1262999130-hackerrank-interview-and-google-calendar-integration.md",
+      "product_area": "integrations",
+      "score": 0.016129,
+      "bm25_rank": 2,
+      "dense_rank": 0
+    },
+    {
+      "chunk_id": "fde75ec49532",
+      "doc_path": "data\\hackerrank\\hackerrank_community\\additional-resources\\4745765442-notification.md",
+      "product_area": "community",
+      "score": 0.016129,
+      "bm25_rank": 0,
+      "dense_rank": 2
+    },
+    {
+      "chunk_id": "90434d876359",
+      "doc_path": "data\\hackerrank\\integrations\\scheduling\\2480863637-hackerrank-interview-and-outlook-calendar-integration.md",
+      "product_area": "integrations",
+      "score": 0.015873,
+      "bm25_rank": 3,
+      "dense_rank": 0
+    },
+    {
+      "chunk_id": "70eff49e76c2",
+      "doc_path": "data\\hackerrank\\general-help\\release-notes\\4368819843-april-2026-release-notes.md",
+      "product_area": "general_help",
+      "score": 0.015873,
+      "bm25_rank": 0,
+      "dense_rank": 3
+    },
+    {
+      "chunk_id": "66f233d7aa92",
+      "doc_path": "data\\hackerrank\\integrations\\applicant-tracking-systems\\greenhouse\\3593554348-enabling-outcome-data-and-public-link-with-greenhouse.md",
+      "product_area": "integrations",
+      "score": 0.015625,
+      "bm25_rank": 4,
+      "dense_rank": 0
+    },
+    {
+      "chunk_id": "d9fd9cf969b1",
+      "doc_path": "data\\hackerrank\\screen\\managing-tests\\6967597139-creating-a-new-test.md",
+      "product_area": "screen",
+      "score": 0.015625,
+      "bm25_rank": 0,
+      "dense_rank": 4
+    }
+  ],
+  "grounded": {
+    "response": "The \"Apply\" tab has been deprecated on HackerRank. Features previously found there are now accessible under other tabs. For example, \"Mock Interviews\" and \"Coding challenges\" can be found under the \"Prepare\" tab.",
+    "cited_chunk_ids": [
+      "fde75ec49532"
+    ],
+    "product_area": "community",
+    "confidence": "high",
+    "insufficient_corpus": false,
+    "can_act_unilaterally": true,
+    "reasoning": "The user is asking about the 'Apply' tab not being visible, and one chunk directly addresses the deprecation of the 'Apply' tab and where its features can now be found."
+  },
+  "final": {
+    "status": "replied",
+    "product_area": "community",
+    "response": "The \"Apply\" tab has been deprecated on HackerRank. Features previously found there are now accessible under other tabs. For example, \"Mock Interviews\" and \"Coding challenges\" can be found under the \"Prepare\" tab.",
+    "justification": "Grounded reply from 1 chunk(s) at confidence=high. The user is asking about the 'Apply' tab not being visible, and one chunk directly addresses the deprecation of the 'Apply' tab and where its features can now be found.",
+    "request_type": "product_issue"
+  },
+  "timings_ms": {
+    "triage_ms": 7397.8,
+    "retrieve_ms": 7746.8,
+    "ground_ms": 2394.9,
+    "gate_ms": 0.0,
+    "total_ms": 17539.6
+  }
+}

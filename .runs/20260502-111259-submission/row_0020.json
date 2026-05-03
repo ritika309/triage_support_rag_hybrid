@@ -1,0 +1,112 @@
+{
+  "row_index": 20,
+  "input": {
+    "issue": "I have found a major security vulnerability in Claude, what are the next steps",
+    "subject": "Bug bounty",
+    "company": "Claude"
+  },
+  "triage": {
+    "detected_company": "Claude",
+    "sub_requests": [
+      "report security vulnerability"
+    ],
+    "scope": "in_scope",
+    "risk": "high",
+    "request_type_hint": "bug",
+    "product_area_hint": "security",
+    "asks_unilateral_action": false,
+    "short_circuit": "none",
+    "reasoning": "Reporting a security vulnerability is a valid request within scope, and the corpus likely contains procedures for handling such reports."
+  },
+  "retrieval": [
+    {
+      "chunk_id": "c1eefbfa6ed7",
+      "doc_path": "data\\claude\\claude\\features-and-capabilities\\14661296-claude-security.md",
+      "product_area": "features_and_capabilities",
+      "score": 0.029907,
+      "bm25_rank": 14,
+      "dense_rank": 1
+    },
+    {
+      "chunk_id": "17b371ccd970",
+      "doc_path": "data\\claude\\claude-code\\11932705-automated-security-reviews-in-claude-code.md",
+      "product_area": "claude_code",
+      "score": 0.02967,
+      "bm25_rank": 10,
+      "dense_rank": 5
+    },
+    {
+      "chunk_id": "18d4683ff4b7",
+      "doc_path": "data\\claude\\safeguards\\14604842-real-time-cyber-safeguards-on-claude.md",
+      "product_area": "safeguards",
+      "score": 0.029631,
+      "bm25_rank": 8,
+      "dense_rank": 7
+    },
+    {
+      "chunk_id": "c21be9bc61b6",
+      "doc_path": "data\\claude\\safeguards\\11427875-public-vulnerability-reporting.md",
+      "product_area": "safeguards",
+      "score": 0.016393,
+      "bm25_rank": 1,
+      "dense_rank": 0
+    },
+    {
+      "chunk_id": "8a35969d8358",
+      "doc_path": "data\\claude\\safeguards\\8106465-our-approach-to-user-safety.md",
+      "product_area": "safeguards",
+      "score": 0.016129,
+      "bm25_rank": 2,
+      "dense_rank": 0
+    },
+    {
+      "chunk_id": "878a7ffb02fd",
+      "doc_path": "data\\claude\\claude-code\\launch-guides\\14552646-troubleshoot-claude-code-installation-and-authentication.md",
+      "product_area": "claude_code",
+      "score": 0.016129,
+      "bm25_rank": 0,
+      "dense_rank": 2
+    },
+    {
+      "chunk_id": "441849795563",
+      "doc_path": "data\\claude\\safeguards\\12119250-model-safety-bug-bounty-program.md",
+      "product_area": "safeguards",
+      "score": 0.015873,
+      "bm25_rank": 3,
+      "dense_rank": 0
+    },
+    {
+      "chunk_id": "7a8ab3d2dfc8",
+      "doc_path": "data\\claude\\claude-code\\11932705-automated-security-reviews-in-claude-code.md",
+      "product_area": "claude_code",
+      "score": 0.015873,
+      "bm25_rank": 0,
+      "dense_rank": 3
+    }
+  ],
+  "grounded": {
+    "response": "To report a security vulnerability, please review our Responsible Disclosure Policy, which includes instructions on how to submit a report. You can find more information and the submission process detailed here: https://www.anthropic.com/responsible-disclosure-policy",
+    "cited_chunk_ids": [
+      "c21be9bc61b6"
+    ],
+    "product_area": "safeguards",
+    "confidence": "high",
+    "insufficient_corpus": false,
+    "can_act_unilaterally": true,
+    "reasoning": "The user is asking for the next steps to report a security vulnerability, and chunk c21be9bc61b6 provides the direct link to the Responsible Disclosure Policy and instructions on how to submit a report."
+  },
+  "final": {
+    "status": "replied",
+    "product_area": "safeguards",
+    "response": "To report a security vulnerability, please review our Responsible Disclosure Policy, which includes instructions on how to submit a report. You can find more information and the submission process detailed here: https://www.anthropic.com/responsible-disclosure-policy",
+    "justification": "Grounded reply from 1 chunk(s) at confidence=high. The user is asking for the next steps to report a security vulnerability, and chunk c21be9bc61b6 provides the direct link to the Responsible Disclosure Policy and instructions on how to submit a report.",
+    "request_type": "bug"
+  },
+  "timings_ms": {
+    "triage_ms": 7141.7,
+    "retrieve_ms": 33.0,
+    "ground_ms": 7800.5,
+    "gate_ms": 0.1,
+    "total_ms": 14975.3
+  }
+}

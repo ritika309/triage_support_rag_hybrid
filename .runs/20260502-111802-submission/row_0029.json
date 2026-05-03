@@ -1,0 +1,112 @@
+{
+  "row_index": 29,
+  "input": {
+    "issue": "i am in US Virgin Islands and the merchant is saying i have to spend minimum 10$ on my VISA card, why so?",
+    "subject": "Visa card minimum spend",
+    "company": "Visa"
+  },
+  "triage": {
+    "detected_company": "Visa",
+    "sub_requests": [
+      "inquire about minimum spend requirement on Visa card in US Virgin Islands"
+    ],
+    "scope": "in_scope",
+    "risk": "low",
+    "request_type_hint": "product_issue",
+    "product_area_hint": "consumer_support",
+    "asks_unilateral_action": false,
+    "short_circuit": "none",
+    "reasoning": "User is asking a question about a potential merchant policy related to their Visa card, which can be answered by retrieving information on Visa's general policies or common merchant practices."
+  },
+  "retrieval": [
+    {
+      "chunk_id": "f2afaffa38ab",
+      "doc_path": "data\\visa\\support.md",
+      "product_area": "general_support",
+      "score": 0.032787,
+      "bm25_rank": 1,
+      "dense_rank": 1
+    },
+    {
+      "chunk_id": "f407d98b82d8",
+      "doc_path": "data\\visa\\support\\consumer\\travel-support.md",
+      "product_area": "travel_support",
+      "score": 0.031281,
+      "bm25_rank": 6,
+      "dense_rank": 2
+    },
+    {
+      "chunk_id": "e1ba550d19e2",
+      "doc_path": "data\\visa\\support\\consumer\\visa-rules.md",
+      "product_area": "consumer",
+      "score": 0.030798,
+      "bm25_rank": 3,
+      "dense_rank": 7
+    },
+    {
+      "chunk_id": "0aa8d606c27b",
+      "doc_path": "data\\visa\\support\\consumer\\travel-support.md",
+      "product_area": "travel_support",
+      "score": 0.030769,
+      "bm25_rank": 5,
+      "dense_rank": 5
+    },
+    {
+      "chunk_id": "fb97c32de9a6",
+      "doc_path": "data\\visa\\support\\small-business\\fraud-protection.md",
+      "product_area": "small_business",
+      "score": 0.030622,
+      "bm25_rank": 2,
+      "dense_rank": 9
+    },
+    {
+      "chunk_id": "1b9af702f54c",
+      "doc_path": "data\\visa\\support\\small-business\\regulations-fees.md",
+      "product_area": "small_business",
+      "score": 0.03055,
+      "bm25_rank": 7,
+      "dense_rank": 4
+    },
+    {
+      "chunk_id": "1e8d31848a0b",
+      "doc_path": "data\\visa\\support\\consumer\\travel-support\\exchange-rate-calculator.md",
+      "product_area": "travel_support",
+      "score": 0.029572,
+      "bm25_rank": 13,
+      "dense_rank": 3
+    },
+    {
+      "chunk_id": "ab92d7b3fc41",
+      "doc_path": "data\\visa\\support\\small-business\\fraud-protection.md",
+      "product_area": "small_business",
+      "score": 0.028958,
+      "bm25_rank": 4,
+      "dense_rank": 15
+    }
+  ],
+  "grounded": {
+    "response": "Visa does not set minimum spend requirements for merchants. Merchants themselves decide on minimum purchase amounts for card transactions. If a merchant is asking you to spend a minimum of $10, it is their policy, not a Visa rule. You may wish to contact your card issuer for further assistance or to inquire about specific transaction policies.",
+    "cited_chunk_ids": [
+      "f2afaffa38ab"
+    ],
+    "product_area": "general_support",
+    "confidence": "high",
+    "insufficient_corpus": false,
+    "can_act_unilaterally": true,
+    "reasoning": "The corpus states that merchants set their own policies and that card issuers can provide further assistance regarding transaction policies, directly addressing the user's query about minimum spend."
+  },
+  "final": {
+    "status": "replied",
+    "product_area": "general_support",
+    "response": "Visa does not set minimum spend requirements for merchants. Merchants themselves decide on minimum purchase amounts for card transactions. If a merchant is asking you to spend a minimum of $10, it is their policy, not a Visa rule. You may wish to contact your card issuer for further assistance or to inquire about specific transaction policies.",
+    "justification": "Grounded reply from 1 chunk(s) at confidence=high. The corpus states that merchants set their own policies and that card issuers can provide further assistance regarding transaction policies, directly addressing the user's query about minimum spend.",
+    "request_type": "product_issue"
+  },
+  "timings_ms": {
+    "triage_ms": 6031.7,
+    "retrieve_ms": 42.2,
+    "ground_ms": 7091.2,
+    "gate_ms": 0.0,
+    "total_ms": 13165.3
+  }
+}

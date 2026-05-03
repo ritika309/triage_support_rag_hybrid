@@ -1,0 +1,36 @@
+{
+  "row_index": 3,
+  "input": {
+    "issue": "I used my Visa card to buy something online, but the merchant sent the wrong product \nand is ignoring my emails. Please make Visa refund me today and ban the seller \nfrom taking payments.",
+    "subject": "Help",
+    "company": "Visa"
+  },
+  "triage": {
+    "detected_company": "Visa",
+    "sub_requests": [
+      "refund me",
+      "ban the seller"
+    ],
+    "scope": "in_scope",
+    "risk": "high",
+    "request_type_hint": "product_issue",
+    "product_area_hint": "dispute_resolution",
+    "asks_unilateral_action": true,
+    "short_circuit": "unilateral",
+    "reasoning": "User demands Visa unilaterally refund and ban a merchant, which support cannot do without going through dispute process."
+  },
+  "retrieval": [],
+  "grounded": null,
+  "final": {
+    "status": "escalated",
+    "product_area": "uncategorized",
+    "response": "Escalate to a human",
+    "justification": "Ticket demands an action support cannot grant from documentation alone. User demands Visa unilaterally refund and ban a merchant, which support cannot do without going through dispute process.",
+    "request_type": "product_issue"
+  },
+  "timings_ms": {
+    "triage_ms": 10524.7,
+    "gate_ms": 0.0,
+    "total_ms": 10524.7
+  }
+}
