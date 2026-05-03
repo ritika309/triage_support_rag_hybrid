@@ -14,55 +14,7 @@ A **deterministic 4-stage pipeline** — Triage → Retrieve → Ground → Gate
 
 ## Architecture
 
-```
-┌──────────────────────────────────────────────────────────────────────────┐
-│                ticket row (issue, subject, company)                      │
-└────────────────────────────┬─────────────────────────────────────────────┘
-                             ▼
-┌──────────────────────────────────────────────────────────────────────────┐
-│ STAGE 1 — TRIAGE  (LLM, structured output)                               │
-│  - detect company if input is None / wrong                               │
-│  - split into atomic sub-requests                                        │
-│  - scope: in_scope | off_topic | social | malicious                      │
-│  - risk: low | med | high                                                │
-│  - request_type_hint, product_area_hint                                  │
-│  - asks_unilateral_action, short_circuit                                 │
-└────────────────────────────┬─────────────────────────────────────────────┘
-                             ▼
-                short_circuit ≠ none ?  ─── yes ──▶ skip directly to GATE
-                             │ no
-                             ▼
-┌──────────────────────────────────────────────────────────────────────────┐
-│ STAGE 2 — RETRIEVE  (no LLM — hybrid)                                    │
-│  - filter by detected_company                                            │
-│  - BM25 (rank_bm25) top-20 + dense (bge-small-en-v1.5) top-20            │
-│  - Reciprocal Rank Fusion (RRF) → top-K (default 8)                      │
-└────────────────────────────┬─────────────────────────────────────────────┘
-                             ▼
-┌──────────────────────────────────────────────────────────────────────────┐
-│ STAGE 3 — GROUND  (LLM, structured output)                               │
-│  - response, cited_chunk_ids[], product_area (from enum)                 │
-│  - confidence: low | med | high                                          │
-│  - insufficient_corpus, can_act_unilaterally                             │
-│  - hard rule: NO unauthorized promises (refunds, bans, score overrides)  │
-└────────────────────────────┬─────────────────────────────────────────────┘
-                             ▼
-┌──────────────────────────────────────────────────────────────────────────┐
-│ STAGE 4 — GATE  (pure Python — single point of truth)                    │
-│  Decision precedence (first matching rule wins):                         │
-│    1. ack            → replied / invalid / canned ack                    │
-│    2. off_topic      → replied / invalid / canned out-of-scope           │
-│    3. malicious      → escalated / invalid                               │
-│    4. unilateral     → escalated / triage request_type                   │
-│    5. cannot_act     → escalated (LLM caught it post-retrieval)          │
-│    6. insufficient   → escalated                                         │
-│    7. low conf+high risk → escalated (defensive)                         │
-│    8. else           → replied / grounded response                       │
-│  Also clamps product_area to the company's canonical enum.               │
-└────────────────────────────┬─────────────────────────────────────────────┘
-                             ▼
-                       output.csv row
-```
+![RAG pipeline](./rag%20pipeline.png)
 
 ---
 
@@ -132,48 +84,10 @@ Per-row trace JSON for every pipeline run is dumped to `code/.runs/<timestamp>-<
 
 ---
 
-## File map
-
-```
-code/
-├── config.py                  # env-driven settings; auto-enables HF offline mode if model is cached
-├── corpus.py                  # markdown loader + H2 chunker + product_area canonicalization
-├── retrieve.py                # hybrid retriever (BM25 + dense + RRF), persisted index
-├── llm.py                     # provider abstraction (Gemini + Groq), rate limiter, 429 backoff
-├── triage.py                  # stage 1 — TriageResult + few-shot prompt
-├── respond.py                 # stage 3 — GroundedResult + citation enforcement
-├── gate.py                    # stage 4 — deterministic decision rules (single point of truth)
-├── pipeline.py                # wires stages 1–4 + per-row trace dump
-├── eval.py                    # sample-CSV loader + retrieval-only smoke metrics
-├── main.py                    # CLI entry point (all commands)
-├── prompts/
-│   ├── triage.md              # system prompt with 9 few-shot examples
-│   └── respond.md             # system prompt with 6 few-shot examples
-├── requirements.txt
-├── README.md                  # this file
-├── .cache/                    # gitignored — index files
-└── .runs/                     # gitignored — per-run trace dumps
-```
-
----
-
-## Why this architecture
-
-### Why no agent loop / framework
-
-Output schema is fixed and deterministic. Free-form ReAct or LangGraph adds debugging surface area without delivering value here. A hand-written DAG of typed dataclasses ships faster, is auditable, and is easier to defend in the AI judge interview.
-
-### Why no fine-tuning
-
-109 labeled rows is too few to fine-tune on without overfitting. The base LLM already knows English, classification, and JSON schema. The hard work is **retrieval + grounding + safety**, which is data-shaped, not weight-shaped. In-context few-shots + structured output replace SFT for a fraction of the effort, with full citation traceability.
-
 ### Why hybrid retrieval
 
 Support docs use exact phrases ("reset password", "429 errors", "traveller's cheques") that BM25 catches reliably; dense embeddings catch semantic paraphrase ("my chat has private info" → conversation deletion docs). Reciprocal Rank Fusion is parameter-free and combines both signals robustly.
 
-### Why local embeddings
-
-Free, deterministic, offline (after first download), and ~750 chunks fits in <10MB of vectors. No API rate limits, no DNS dependencies during runs.
 
 ### Why a deterministic gate
 
@@ -229,79 +143,3 @@ Reports:
 - `trace_dir` — pointer to the dumped per-row JSONs for inspection
 
 ---
-
-## Submission
-
-The submission has three artifacts (per the repo's top-level `README.md`):
-
-### 1. Predictions CSV
-
-```powershell
-# from repo root, .venv activated, .env populated, index built
-python -m code.main
-```
-
-Writes `support_tickets/output.csv` with one row per input row (57 rows expected). Columns: `status, product_area, response, justification, request_type`.
-
-Verify:
-
-```powershell
-(Get-Content .\support_tickets\output.csv).Count   # expect 58 (header + 57 rows)
-```
-
-### 2. Code zip
-
-Zip the `code/` directory **excluding** `.cache/` and `.runs/`:
-
-```powershell
-$exclude = @('.cache', '.runs', '__pycache__')
-Get-ChildItem -Path code -Recurse |
-  Where-Object {
-    $p = $_.FullName
-    -not ($exclude | Where-Object { $p -like "*\$_\*" -or $p -like "*\$_" })
-  } | Compress-Archive -DestinationPath code-submission.zip -Force
-```
-
-Or simpler — `Compress-Archive` and just delete `.cache/` and `.runs/` before zipping:
-
-```powershell
-Remove-Item -Recurse -Force code\.cache, code\.runs -ErrorAction SilentlyContinue
-Compress-Archive -Path code\* -DestinationPath code-submission.zip -Force
-```
-
-### 3. Chat transcript
-
-The `AGENTS.md`-driven log file:
-
-```
-%USERPROFILE%\hackerrank_orchestrate\log.txt
-```
-
-Upload as-is.
-
-### Submit
-
-https://www.hackerrank.com/contests/hackerrank-orchestrate-may26/challenges/support-agent/submission
-
-Upload all three:
-- Code zip
-- Predictions CSV (`support_tickets/output.csv`)
-- Chat transcript (`log.txt` from above)
-
----
-
-## AI judge interview crib
-
-Topics most likely to come up and the answers I'd give:
-
-| Question | Answer |
-|---|---|
-| "Walk me through your architecture." | 4-stage deterministic pipeline; only the gate sets final values. |
-| "Why a deterministic gate instead of an LLM critic?" | Auditability + 0 added latency + crisp rules I can defend per-case. |
-| "Why hybrid retrieval?" | BM25 catches exact phrases (reset password, 429), dense catches paraphrase. RRF combines them parameter-free. |
-| "Why no fine-tuning?" | 109 labels too few; SFT on a grounded-retrieval task degrades citation traceability. In-context few-shots achieve same effect cheaper and with full audit. |
-| "What's your biggest failure mode?" | LLM misclassifying "self-service action" as `unilateral` — caught and patched after eval iteration; example in trace. |
-| "How do you handle multi-request tickets?" | Triage emits `sub_requests`; gate uses most-severe routing — any sub-request needing escalation escalates the whole ticket. |
-| "How do you prevent hallucinated answers?" | Mandatory `cited_chunk_ids` from retrieved set; `insufficient_corpus=true` triggers escalation; `--respond` checks every cited ID against the retrieved set. |
-| "Determinism?" | `temperature=0`, structured output via schema, signature-cached index, pinned deps, per-row traces. |
-| "Why split LLM models?" | Triage volume × TPM cap meant we needed a fast small model (8B); grounding is lower volume but reasoning-heavy, so 70B. Free-tier-fit. |
